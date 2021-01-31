@@ -4,7 +4,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 const theme = createMuiTheme({
   //change primary font to Montserrat for whole website
   typography: {
-    fontFamily: "Poppins, Carter One, Arial, sans-serif",
+    fontFamily: "Poppins, Squada One, Arial, sans-serif",
   },
 
   //set colour pallete
