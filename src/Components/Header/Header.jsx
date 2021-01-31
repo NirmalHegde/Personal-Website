@@ -32,7 +32,6 @@ const Header = () => {
                 {desktop && <>
                     <Tabs aria-label="tabs">
                         <Tab className={classes.tabs} label="Home" />
-                        <Tab className={classes.tabs} label="About" />
                         <Tab className={classes.tabs} label="Projects" />
                         <Tab className={classes.tabs} label="Resume" />
                         <Tab className={classes.tabs} label="Contact" />
@@ -49,7 +48,7 @@ const Header = () => {
                         onKeyDown={toggleDrawer("left", false)}
                         >
                             <List className={classes.list}>
-                                {['Home', 'About', 'Projects', 'Resume', 'Contact'].map((text, index) => (
+                                {['Home', 'Projects', 'Resume', 'Contact'].map((text, index) => (
                                 <ListItem button key={text}>
                                     <ListItemText primary={text} />
                                 </ListItem>
