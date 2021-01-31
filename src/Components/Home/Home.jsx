@@ -2,7 +2,7 @@ import React from 'react'
 
 import HomeStyles from './HomeStyles'
 
-const Contact = () => {
+const Home = () => {
 	return (
 		<h1>Home</h1>
 	)
