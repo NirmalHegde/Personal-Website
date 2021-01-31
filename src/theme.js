@@ -17,6 +17,23 @@ const theme = createMuiTheme({
       main: "#FFBF14", //yellow
     }
   },
+
+  overrides: {
+    MuiDrawer: {
+      paper: {
+        backgroundColor: "#327da8"
+      }
+    },
+    MuiTab: {
+      root: {
+          textTransform: "none", 
+          //allows for hover functionality
+          '&:hover': {
+            background: '#2f7196'
+          }
+      }
+    },
+  }
 });
 
 export default theme;

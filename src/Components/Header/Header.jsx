@@ -41,18 +41,19 @@ const Header = () => {
                     <IconButton onClick={toggleDrawer("left", true)} aria-label="menu">
                         <MenuIcon />
                     </IconButton>
-                    <Drawer anchor='left' open={state['left']} onClose={toggleDrawer('left', false)}>
+                    <Drawer variant='temporary' anchor='left' open={state['left']} onClose={toggleDrawer('left', false)}>
                         <div
                         role="presentation"
                         onClick={toggleDrawer("left", false)}
                         onKeyDown={toggleDrawer("left", false)}
                         >
-                            <List className={classes.list}>
-                                {['Home', 'Projects', 'Resume', 'Contact'].map((text, index) => (
-                                <ListItem button key={text}>
-                                    <ListItemText primary={text} />
-                                </ListItem>
-                                ))}
+                            <List>
+                                <Tabs orientation="vertical">
+                                    <Tab className={classes.list} label={<div> Home </div>} />
+                                    <Tab className={classes.list} label={<div> Projects </div>} />
+                                    <Tab className={classes.list} label={<div> Resume </div>} />
+                                    <Tab className={classes.list} label={<div> Contact </div>} />
+                                </Tabs>
                             </List>
                         </div>
                     </Drawer>

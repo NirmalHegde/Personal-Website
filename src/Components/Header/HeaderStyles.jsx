@@ -14,9 +14,13 @@ const HeaderStyles = makeStyles((theme) => ({
         flexGrow: 1
     },
     tabs: {
-        fontSize: "100%",
-        color: "#FFFFFF"
-    }
+        fontFamily: "Squada One",
+        fontSize: "140%",
+        color: "#FFFFFF",
+        '&:hover': {
+            background: "#2f7196"
+        }
+    },
 })) 
 
 export default HeaderStyles;
