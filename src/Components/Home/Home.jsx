@@ -3,8 +3,12 @@ import React from 'react'
 import HomeStyles from './HomeStyles'
 
 const Home = () => {
+	const classes = HomeStyles();
 	return (
-		<h1>Home</h1>
+		<div className={classes.size}>
+			<br /><br /><br />
+			<h1>Home</h1>
+		</div>
 	)
 }
 

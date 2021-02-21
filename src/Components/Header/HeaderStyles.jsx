@@ -1,12 +1,19 @@
 //Styling for header content
+import { Palette, PlayCircleFilledTwoTone } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/styles';
 
 const HeaderStyles = makeStyles((theme) => ({
-    root: {
-        background: "#327da8",
+    navbarSolid: {
+        transition: "0.5s",
+        background: "#1F1F1F",
+    },
+    navbarTransparent: {
+        transition: "0.5s",
+        background: "transparent",
     },
     initials: {
-        fontFamily: "Squada One",
+        fontFamily: "Poppins",
+        color: theme.palette.primary.main,
         fontSize: "300%",
         fontWeight: "400"
     },
@@ -14,13 +21,19 @@ const HeaderStyles = makeStyles((theme) => ({
         flexGrow: 1
     },
     tabs: {
-        fontFamily: "Squada One",
-        fontSize: "140%",
-        color: "#FFFFFF",
+        fontFamily: "Poppins",
+        fontSize: "110%",
+        fontWeight: "500",
+        color: theme.palette.primary.main,
         '&:hover': {
-            background: "#2f7196"
+            transition: "0.5s",
+            color: "#a0eb72"
         }
     },
-})) 
+    icon: {
+        color: "#FFFFFF",
+        fontSize: "115%"
+    }
+}))
 
 export default HeaderStyles;

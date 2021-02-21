@@ -10,27 +10,22 @@ const theme = createMuiTheme({
   //set colour pallete
   palette: {
     primary: {
-      light: "#757575", //light grey
-      main: "#404040", //dark grey
+      main: "#ffffff", //dark grey
     },
     secondary: {
-      main: "#FFBF14", //yellow
+      main: "#ffffff", //yellow
     }
   },
 
   overrides: {
     MuiDrawer: {
       paper: {
-        backgroundColor: "#327da8"
+        backgroundColor: "#1f1f1f"
       }
     },
     MuiTab: {
       root: {
-          textTransform: "none", 
-          //allows for hover functionality
-          '&:hover': {
-            background: '#2f7196'
-          }
+          textTransform: "none",
       }
     },
   }

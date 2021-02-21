@@ -1,6 +1,6 @@
 //React/Material UI Libraries
 import React from 'react';
-import { useMediaQuery, AppBar, Toolbar, Typography, Tab, Tabs, IconButton, List, ListItemText, ListItem, Drawer } from '@material-ui/core';
+import { useMediaQuery, AppBar, Toolbar, Typography, Tab, Tabs, IconButton, List, Drawer } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
 
@@ -24,13 +24,33 @@ const Header = () => {
         setState({ ...state, [anchor]: open });
     };
 
+    const [background, setBackground] = React.useState('navbarTransparent')
+    const navRef = React.useRef();
+    navRef.current = background;
+    React.useEffect(() => {
+        const handleScroll = () => {
+            const show = window.scrollY > 0.1;
+            if (show) {
+                setBackground('navbarSolid');
+            } else {
+                setBackground('navbarTransparent');
+            }
+        }
+        document.addEventListener('scroll', handleScroll);
+
+        return () => {
+            document.removeEventListener('scroll', handleScroll);
+        }
+    }, []);
+
     return (
-        <AppBar className={classes.root} position="static"> {/*Static ensures header is always visible*/}
+        <div>
+        <AppBar elevation={0} className={classes[navRef.current]}> {/*Static ensures header is always visible*/}
             <Toolbar>
                 <Typography className={classes.initials}>NH.</Typography>
                 <div className={classes.space}></div>
                 {desktop && <>
-                    <Tabs aria-label="tabs">
+                    <Tabs textColor="primary" aria-label="tabs">
                         <Tab className={classes.tabs} label="Home" />
                         <Tab className={classes.tabs} label="Projects" />
                         <Tab className={classes.tabs} label="Resume" />
@@ -39,7 +59,7 @@ const Header = () => {
                 </>}
                 {mobile && <>
                     <IconButton onClick={toggleDrawer("left", true)} aria-label="menu">
-                        <MenuIcon />
+                        <MenuIcon className={classes.icon} />
                     </IconButton>
                     <Drawer variant='temporary' anchor='left' open={state['left']} onClose={toggleDrawer('left', false)}>
                         <div
@@ -47,20 +67,19 @@ const Header = () => {
                         onClick={toggleDrawer("left", false)}
                         onKeyDown={toggleDrawer("left", false)}
                         >
-                            <List>
-                                <Tabs orientation="vertical">
-                                    <Tab className={classes.list} label={<div> Home </div>} />
-                                    <Tab className={classes.list} label={<div> Projects </div>} />
-                                    <Tab className={classes.list} label={<div> Resume </div>} />
-                                    <Tab className={classes.list} label={<div> Contact </div>} />
+                                <Tabs textColor="primary" orientation="vertical">
+                                    <Tab className={classes.tabs} label="Home" />
+                                    <Tab className={classes.tabs} label="Projects" />
+                                    <Tab className={classes.tabs} label="Resume" />
+                                    <Tab className={classes.tabs} label="Contact" />
                                 </Tabs>
-                            </List>
                         </div>
                     </Drawer>
                 </>}
 
             </Toolbar>
         </AppBar>
+        </div>
     );
 };
 
