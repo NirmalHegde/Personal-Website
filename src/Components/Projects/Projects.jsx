@@ -3,8 +3,11 @@ import React from 'react'
 import ProjectsStyles from './ProjectsStyles'
 
 const Projects = () => {
+	const classes = ProjectsStyles();
 	return (
-		<h1>Projects</h1>
+		<div className={classes.size}>
+			<h1>Projects</h1>
+		</div>
 	)
 }
 
