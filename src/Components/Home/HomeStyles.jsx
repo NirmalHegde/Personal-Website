@@ -13,7 +13,10 @@ const HomeStyles = makeStyles((theme) => ({
 		color: theme.palette.primary.main
 	},
 	inline: {
-		display: "flex"
+		display: "flex",
+		color: theme.palette.primary.main,
+		fontFamily: "Poppins",
+		fontSize: "2rem"
 	}
 })) 
 

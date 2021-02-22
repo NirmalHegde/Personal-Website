@@ -26,7 +26,7 @@ const HeaderStyles = makeStyles((theme) => ({
         color: theme.palette.primary.main,
         '&:hover': {
             transition: "0.5s",
-            color: "#7f8cdf"
+            color: "#b5befa"
         }
     },
     icon: {

@@ -16,18 +16,20 @@ const Home = () => {
 							<div>
 								<br />
 								<Typography className={classes.titleText} variant="h3">Hello there! My name is</Typography>
-								<br /> 	
+								<br />
 								<Typography className={classes.titleText} variant="h1">Nirmal Hegde</Typography>
 								<br />
 								<div className={classes.inline}>
-								<Typography className={classes.titleText} variant="h3">And I am a</Typography>
-								<Typewriter
-									options={{
-										strings: ['Developer', 'Leader', 'Designer'],
-										autoStart: true,
-										loop: true,
-									}}
-								/>
+									<Typography className={classes.titleText} variant="h3" display="flex">And I am a &nbsp;</Typography>
+									<div>
+										<Typewriter
+											options={{
+												strings: ['Developer', 'Leader', 'Designer'],
+												autoStart: true,
+												loop: true,
+											}}
+										/>
+									</div>
 								</div>
 							</div>
 						</div>
