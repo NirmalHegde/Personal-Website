@@ -26,9 +26,9 @@ const Particle = () => {
 					},
 					"modes": {
 						"attract": {
-							"distance": 250,
+							"distance": 300,
 							"duration": 2,
-							"speed": 3,
+							"speed": 4,
 						},
 						"grab": {
 							"distance": 400

@@ -1,5 +1,6 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
+import Typewriter from "typewriter-effect"
 
 import HomeStyles from './HomeStyles'
 
@@ -8,14 +9,28 @@ const Home = () => {
 	return (
 		<div className={classes.size}>
 			<Grid container>
-				<Grid item xs={12}>
-					<br /><br /><br />
-				</Grid>
 				<Grid item xs={1}></Grid>
 				<Grid item container xs={10}>
 					<Grid item xs={6}>
-						<h3>Hello there! My name is</h3>
-						<h1>Nirmal Hegde</h1>
+						<div className={classes.title}>
+							<div>
+								<br />
+								<Typography className={classes.titleText} variant="h3">Hello there! My name is</Typography>
+								<br /> 	
+								<Typography className={classes.titleText} variant="h1">Nirmal Hegde</Typography>
+								<br />
+								<div className={classes.inline}>
+								<Typography className={classes.titleText} variant="h3">And I am a</Typography>
+								<Typewriter
+									options={{
+										strings: ['Developer', 'Leader', 'Designer'],
+										autoStart: true,
+										loop: true,
+									}}
+								/>
+								</div>
+							</div>
+						</div>
 					</Grid>
 					<Grid item xs={6}>
 
