@@ -1,5 +1,4 @@
 //Styling for header content
-import { Palette, PlayCircleFilledTwoTone } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/styles';
 
 const HeaderStyles = makeStyles((theme) => ({
