@@ -1,7 +1,7 @@
 //Styling for header content
 import { makeStyles } from '@material-ui/styles';
 
-const HeaderStyles = makeStyles((theme) => ({
+const NavbarStyles = makeStyles((theme) => ({
     navbarSolid: {
         transition: "0.5s",
         background: "#1F1F1F",
@@ -36,4 +36,4 @@ const HeaderStyles = makeStyles((theme) => ({
     }
 }))
 
-export default HeaderStyles;
+export default NavbarStyles;

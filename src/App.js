@@ -2,7 +2,7 @@
 import React from 'react'
 
 //File Imports
-import Header from './Components/Header/Header'
+import Navbar from './Components/Navbar/Navbar'
 import Home from './Components/Home/Home'
 import About from './Components/About/About'
 import Projects from './Components/Projects/Projects'
@@ -15,12 +15,12 @@ import './App.css'
 export default function App() {
   return (
     <div>
-      <Header />
+      <Navbar />
       <Particle />
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
+      <Home id="home" />
+      <About id="about" />
+      <Projects id="projects" />
+      <Contact id="contact" />
       <Footer />
     </div>
   );

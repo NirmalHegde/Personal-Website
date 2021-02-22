@@ -5,12 +5,12 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 
 //File Imports
-import HeaderStyles from "./HeaderStyles";
+import NavbarStyles from "./NavbarStyles";
 
 //header section of website
-const Header = () => {
+const Navbar = () => {
 
-    const classes = HeaderStyles(); //gains styles from HeaderStyles.jsx
+    const classes = NavbarStyles(); //gains styles from HeaderStyles.jsx
     const desktop = useMediaQuery('(min-width: 900px)');
     const mobile = useMediaQuery('(max-width: 900px)');
 
@@ -83,6 +83,6 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Navbar;
 
 
