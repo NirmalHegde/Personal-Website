@@ -8,11 +8,12 @@ const HeaderStyles = makeStyles((theme) => ({
     },
     navbarTransparent: {
         transition: "0.5s",
+        paddingTop: "1%",
         background: "transparent",
     },
     initials: {
         fontFamily: "Poppins",
-        color: theme.palette.primary.main,
+        color: "#ffffff",
         fontSize: "300%",
         fontWeight: "400"
     },
@@ -23,14 +24,14 @@ const HeaderStyles = makeStyles((theme) => ({
         fontFamily: "Poppins",
         fontSize: "110%",
         fontWeight: "500",
-        color: theme.palette.primary.main,
+        color: "#ffffff",
         '&:hover': {
             transition: "0.5s",
             color: "#b5befa"
         }
     },
     icon: {
-        color: "#FFFFFF",
+        color: "#ffffff",
         fontSize: "115%"
     }
 }))

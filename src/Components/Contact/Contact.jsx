@@ -1,4 +1,5 @@
 import React from 'react'
+import { Grid, Typography } from '@material-ui/core'
 
 import ContactStyles from './ContactStyles'
 
@@ -6,7 +7,13 @@ const Contact = () => {
 	const classes = ContactStyles();
 	return (
 		<div className={classes.size}>
-			<h1>Contact</h1>
+			<Grid container>
+				<Grid className={classes.title} item xs={12}>
+					<br />
+					<Typography variant="h2">Contact Me</Typography>
+					<Typography variant="h4">~ Can't Wait to Connect! ~</Typography>
+				</Grid>
+			</Grid>
 		</div>
 	)
 }

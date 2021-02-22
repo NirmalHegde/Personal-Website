@@ -4,7 +4,7 @@ import FooterStyles from './FooterStyles'
 const Footer = () => {
 	const classes = FooterStyles();
 	return (
-		<div className={classes.size}>
+		<div className={classes.footer}>
 			<h1>Footer</h1>
 		</div>
 	)

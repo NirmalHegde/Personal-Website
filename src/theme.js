@@ -17,10 +17,11 @@ const theme = createMuiTheme({
   //set colour pallete
   palette: {
     primary: {
-      main: "#ffffff", //dark grey
+      main: "#ffffff",
+      dark: "#d8dcf7"
     },
     secondary: {
-      main: "#ffffff", //yellow
+      main: "#ffffff",
     }
   },
 
