@@ -9,6 +9,7 @@ import Projects from './Components/Projects/Projects'
 import Contact from './Components/Contact/Contact'
 import Particle from './Components/Particles/Particles'
 import Footer from './Components/Footer/Footer'
+import './App.css'
 
 //App contains layout of the node website
 export default function App() {

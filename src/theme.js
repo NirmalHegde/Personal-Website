@@ -9,8 +9,15 @@ const theme = createMuiTheme({
       fontSize: "4rem",
       fontWeight: "550"
     },
+    h2: {
+      fontSize: "3rem",
+      fontWeight: "550"
+    },
     h3: {
       fontSize: "2rem"
+    },
+    h4: {
+      fontSize: "1.3rem"
     }
   },
 
@@ -22,6 +29,7 @@ const theme = createMuiTheme({
     },
     secondary: {
       main: "#ffffff",
+      dark: "#232741"
     }
   },
 

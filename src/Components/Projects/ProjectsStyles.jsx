@@ -6,7 +6,8 @@ const ResumeStyles = makeStyles((theme) => ({
 		background: theme.palette.primary.dark
 	},
 	title: {
-		textAlign: "center"
+		textAlign: "center",
+		color: theme.palette.secondary.dark
 	}
 })) 
 

@@ -5,7 +5,8 @@ const ContactStyles = makeStyles((theme) => ({
 		height: "90vh"
 	},
 	title: {
-		textAlign: "center"
+		textAlign: "center",
+		color: theme.palette.secondary.dark
 	}
 })) 
 

@@ -3,7 +3,13 @@ import { makeStyles } from '@material-ui/styles';
 
 const FooterStyles = makeStyles((theme) => ({
 	footer: {
-		background: "#232741"
+		display: "flex",
+		background: "#232741",
+		height: "8vh",
+		color: "#ffffff",
+		justifyContent: "center",
+		alignItems: "center",
+		fontFamily: "Poppins"
 	}
 }))
 
