@@ -49,20 +49,20 @@ const Navbar = () => {
             <AppBar elevation={0} className={classes[navRef.current]}> {/*Static ensures header is always visible*/}
                 <Toolbar>
                     <Typography className={classes.initials}>NH.</Typography>
-                    <div className={classes.space}></div>
+                    <div className={classes.space} />
                     {desktop && <>
-                        <Tabs value={0} textColor="primary" aria-label="tabs">
+                        <Tabs textColor="primary" aria-label="tabs">
                             <Link smooth="true" duration={1000} to="home">
-                                <Tab value={0} className={classes.tabs} label="Home" />
+                                <Tab className={classes.tabs} label="Home" />
                             </Link>
                             <Link smooth="true" duration={1000} offset={-70} to="about">
-                                <Tab value={1} className={classes.tabs} label="About" />
+                                <Tab className={classes.tabs} label="About" />
                             </Link>
                             <Link smooth="true" duration={1000} offset={-70} to="projects">
-                                <Tab value={2} className={classes.tabs} label="Projects" />
+                                <Tab className={classes.tabs} label="Projects" />
                             </Link>
                             <Link smooth="true" duration={1000} offset={-70} to="contact">
-                                <Tab value={3} className={classes.tabs} label="Contact" />
+                                <Tab className={classes.tabs} label="Contact" />
                             </Link>
                         </Tabs>
                     </>}
