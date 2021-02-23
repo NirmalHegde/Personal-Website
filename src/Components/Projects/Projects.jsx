@@ -6,7 +6,7 @@ import ProjectsStyles from './ProjectsStyles'
 const Projects = () => {
 	const classes = ProjectsStyles();
 	return (
-		<div className={classes.size}>
+		<div id="projects" className={classes.size}>
 			<Grid container>
 				<Grid className={classes.title} item xs={12}>
 					<br />

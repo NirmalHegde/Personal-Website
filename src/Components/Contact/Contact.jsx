@@ -6,7 +6,7 @@ import ContactStyles from './ContactStyles'
 const Contact = () => {
 	const classes = ContactStyles();
 	return (
-		<div className={classes.size}>
+		<div id="contact" className={classes.size}>
 			<Grid container>
 				<Grid className={classes.title} item xs={12}>
 					<br />

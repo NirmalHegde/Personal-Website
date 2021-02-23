@@ -1,6 +1,7 @@
 //React/Material UI Libraries
 import React from 'react';
 import { useMediaQuery, AppBar, Toolbar, Typography, Tab, Tabs, IconButton, Drawer } from '@material-ui/core';
+import { Link } from 'react-scroll'
 import MenuIcon from '@material-ui/icons/Menu';
 
 
@@ -14,7 +15,7 @@ const Navbar = () => {
     const desktop = useMediaQuery('(min-width: 900px)');
     const mobile = useMediaQuery('(max-width: 900px)');
 
-    const [state, setState] = React.useState({left: false});
+    const [state, setState] = React.useState({ left: false });
 
     const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -45,40 +46,48 @@ const Navbar = () => {
 
     return (
         <div>
-        <AppBar elevation={0} className={classes[navRef.current]}> {/*Static ensures header is always visible*/}
-            <Toolbar>
-                <Typography className={classes.initials}>NH.</Typography>
-                <div className={classes.space}></div>
-                {desktop && <>
-                    <Tabs textColor="primary" aria-label="tabs">
-                        <Tab className={classes.tabs} label="Home" />
-                        <Tab className={classes.tabs} label="Projects" />
-                        <Tab className={classes.tabs} label="Resume" />
-                        <Tab className={classes.tabs} label="Contact" />
-                    </Tabs>
-                </>}
-                {mobile && <>
-                    <IconButton onClick={toggleDrawer("left", true)} aria-label="menu">
-                        <MenuIcon className={classes.icon} />
-                    </IconButton>
-                    <Drawer variant='temporary' anchor='left' open={state['left']} onClose={toggleDrawer('left', false)}>
-                        <div
-                        role="presentation"
-                        onClick={toggleDrawer("left", false)}
-                        onKeyDown={toggleDrawer("left", false)}
-                        >
+            <AppBar elevation={0} className={classes[navRef.current]}> {/*Static ensures header is always visible*/}
+                <Toolbar>
+                    <Typography className={classes.initials}>NH.</Typography>
+                    <div className={classes.space}></div>
+                    {desktop && <>
+                        <Tabs value={0} textColor="primary" aria-label="tabs">
+                            <Link smooth="true" duration={1000} to="home">
+                                <Tab value={0} className={classes.tabs} label="Home" />
+                            </Link>
+                            <Link smooth="true" duration={1000} offset={-70} to="about">
+                                <Tab value={1} className={classes.tabs} label="About" />
+                            </Link>
+                            <Link smooth="true" duration={1000} offset={-70} to="projects">
+                                <Tab value={2} className={classes.tabs} label="Projects" />
+                            </Link>
+                            <Link smooth="true" duration={1000} offset={-70} to="contact">
+                                <Tab value={3} className={classes.tabs} label="Contact" />
+                            </Link>
+                        </Tabs>
+                    </>}
+                    {mobile && <>
+                        <IconButton onClick={toggleDrawer("left", true)} aria-label="menu">
+                            <MenuIcon className={classes.icon} />
+                        </IconButton>
+                        <Drawer variant='temporary' anchor='left' open={state['left']} onClose={toggleDrawer('left', false)}>
+                            <div
+                                role="presentation"
+                                onClick={toggleDrawer("left", false)}
+                                onKeyDown={toggleDrawer("left", false)}
+                            >
                                 <Tabs textColor="primary" orientation="vertical">
                                     <Tab className={classes.tabs} label="Home" />
                                     <Tab className={classes.tabs} label="Projects" />
                                     <Tab className={classes.tabs} label="Resume" />
                                     <Tab className={classes.tabs} label="Contact" />
                                 </Tabs>
-                        </div>
-                    </Drawer>
-                </>}
+                            </div>
+                        </Drawer>
+                    </>}
 
-            </Toolbar>
-        </AppBar>
+                </Toolbar>
+            </AppBar>
         </div>
     );
 };

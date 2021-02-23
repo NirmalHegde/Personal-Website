@@ -6,7 +6,7 @@ import AboutStyles from './AboutStyles'
 const About = () => {
 	const classes = AboutStyles();
 	return (
-		<div className={classes.size}>
+		<div id="about" className={classes.size}>
 			<Grid container>
 				<Grid className={classes.title} item xs={12}>
 					<br />

@@ -17,10 +17,10 @@ export default function App() {
     <div>
       <Navbar />
       <Particle />
-      <Home id="home" />
-      <About id="about" />
-      <Projects id="projects" />
-      <Contact id="contact" />
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
       <Footer />
     </div>
   );
