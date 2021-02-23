@@ -13,6 +13,14 @@ const Contact = () => {
 					<Typography variant="h2">Contact Me</Typography>
 					<Typography variant="h4">~ Can't Wait to Connect! ~</Typography>
 				</Grid>
+				<Grid item xs={1}></Grid>
+				<Grid item xs={5}>
+
+				</Grid>
+				<Grid item xs={5}>
+
+				</Grid>
+				<Grid item xs={1}></Grid>
 			</Grid>
 		</div>
 	)
