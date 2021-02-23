@@ -9,7 +9,8 @@ const FooterStyles = makeStyles((theme) => ({
 		color: "#ffffff",
 		justifyContent: "center",
 		alignItems: "center",
-		fontFamily: "Poppins"
+		fontFamily: "Poppins",
+		fontSize: "70%"
 	}
 }))
 

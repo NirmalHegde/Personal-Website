@@ -7,6 +7,18 @@ const ContactStyles = makeStyles((theme) => ({
 	title: {
 		textAlign: "center",
 		color: theme.palette.secondary.dark
+	},
+	form: {
+		height: "76.5vh",
+		display: "flex",
+		alignItem: "center"
+	},
+	align: {
+		display: "flex",
+		justifyContent: "center"
+	},
+	formSpacing: {
+		height: "20vh"
 	}
 })) 
 
