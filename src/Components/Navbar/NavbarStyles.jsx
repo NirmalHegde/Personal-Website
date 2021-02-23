@@ -17,7 +17,7 @@ const NavbarStyles = makeStyles((theme) => ({
         fontSize: "300%",
         fontWeight: "400"
     },
-    space:  {
+    space: {
         flexGrow: 1
     },
     tabs: {

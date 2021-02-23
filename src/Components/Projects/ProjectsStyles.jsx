@@ -9,7 +9,7 @@ const ResumeStyles = makeStyles((theme) => ({
 		textAlign: "center",
 		color: theme.palette.secondary.dark
 	},
-	buttonContainer: {
+	align: {
 		height: "76.5vh",
 		display: "flex",
 		alignItems: "center",
