@@ -18,14 +18,14 @@ const ProjectsCards = (props) => {
 					<Typography variant="h4">
 						{demoTitle}
 					</Typography>
-					<Typography variant="body2" color="textSecondary" component="p">
+					<Typography variant="body2" component="p">
 						{demoDetails}
 					</Typography>
 				</CardContent>
 			</CardActionArea>
 			<CardActions>
 				<a rel="noreferrer" target="_blank" href={gitHub}>
-					<Button variant="body2" color="textSecondary" component="p">View Source Code</Button>
+					<Button component="p">View Source Code</Button>
 				</a>
 			</CardActions>
 		</Card>

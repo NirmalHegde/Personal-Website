@@ -126,7 +126,7 @@ const Particle = () => {
 						"type": "char"
 					},
 					"size": {
-						"value": 7,
+						"value": 8,
 						"random": {
 							"enable": true
 						},

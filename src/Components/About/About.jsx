@@ -20,8 +20,10 @@ const About = () => {
 
 				</Grid>
 				<Grid item xs={5}>
-					<Typography variant="h5" className={classes.subTitle}>Bonjour</Typography>
-					<Typography variant="body1">
+					<Typography variant="h6" className={classes.subTitle} display="inline">My name is Nirmal Hegde and I am a</Typography>
+					<Typography variant="h6" style={{color: "#8c97e1"}} className={classes.subTitle} display="inline"> Software Developer</Typography>
+					<div style={{paddingBottom: "2%"}} />
+					<Typography variant="body2">
 						I am a 1B Systems Design Engineering student at the University of Waterloo.
 						Currently, I am working on several projects which include programming a Sign-Language Detector
 						and building e-commerce websites for various businesses. These projects showcase my love of coding and
@@ -34,7 +36,13 @@ const About = () => {
 					<br />
 					<Divider />
 					<br />
-					<Typography variant="h5" className={classes.subTitle}>My Skills</Typography>
+					<Typography variant="h6" className={classes.subTitle} display="inline">Here are </Typography>
+					<Typography variant="h6" style={{color: "#8c97e1"}} className={classes.subTitle} display="inline">my skills!</Typography>
+					<div style={{paddingBottom: "2%"}} />
+					<Typography variant="body1" className={classes.subTitleSmall}>Languages: </Typography>
+					<Typography variant="body1" className={classes.subTitleSmall}>Frontend: </Typography>
+					<Typography variant="body1" className={classes.subTitleSmall}>Backend: </Typography>
+					<Typography variant="body1" className={classes.subTitleSmall}>Tools: </Typography>
 					<br />
 					<Divider />
 					<br />

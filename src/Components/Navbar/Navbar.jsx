@@ -51,7 +51,7 @@ const Navbar = () => {
                     <Typography className={classes.initials}>NH.</Typography>
                     <div className={classes.space} />
                     {desktop && <>
-                        <Tabs textColor="primary" aria-label="tabs">
+                        <Tabs aria-label="tabs">
                             <Link smooth="true" duration={1000} to="home">
                                 <Tab className={classes.tabs} label="Home" />
                             </Link>
@@ -76,7 +76,7 @@ const Navbar = () => {
                                 onClick={toggleDrawer("left", false)}
                                 onKeyDown={toggleDrawer("left", false)}
                             >
-                                <Tabs textColor="primary" orientation="vertical">
+                                <Tabs orientation="vertical">
                                     <Link smooth="true" duration={1000} to="home">
                                         <Tab onClick={toggleDrawer("left", false)} className={classes.tabs} label="Home" />
                                     </Link>

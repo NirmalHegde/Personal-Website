@@ -9,8 +9,10 @@ const AboutStyles = makeStyles((theme) => ({
 		color: theme.palette.secondary.dark
 	},
 	subTitle: {
-    fontWeight: "600",
-		paddingBottom: "2%"
+    fontWeight: "600"
+	},
+	subTitleSmall: {
+		fontWeight: "600"
 	},
 	button: {
 		backgroundColor: "#b5befa",
