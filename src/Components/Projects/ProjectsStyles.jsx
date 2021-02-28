@@ -15,6 +15,6 @@ const ResumeStyles = makeStyles((theme) => ({
 		alignItems: "center",
 		justifyContent: "center"
 	}
-})) 
+}))
 
 export default ResumeStyles;

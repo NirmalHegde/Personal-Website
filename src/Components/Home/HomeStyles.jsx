@@ -20,6 +20,6 @@ const HomeStyles = makeStyles((theme) => ({
 		fontFamily: "Poppins",
 		fontSize: "2rem"
 	}
-})) 
+}))
 
 export default HomeStyles;

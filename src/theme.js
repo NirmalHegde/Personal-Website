@@ -41,7 +41,7 @@ const theme = createMuiTheme({
     },
     MuiTab: {
       root: {
-          textTransform: "none",
+        textTransform: "none",
       }
     },
   }

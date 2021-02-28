@@ -24,9 +24,9 @@ const ProjectsCards = (props) => {
 				</CardContent>
 			</CardActionArea>
 			<CardActions>
-			<a rel="noreferrer" target="_blank" href={gitHub}>
-				<Button variant="body2" color="textSecondary" component="p">View Source Code</Button>
-			</a>	
+				<a rel="noreferrer" target="_blank" href={gitHub}>
+					<Button variant="body2" color="textSecondary" component="p">View Source Code</Button>
+				</a>
 			</CardActions>
 		</Card>
 

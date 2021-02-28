@@ -19,6 +19,6 @@ const AboutStyles = makeStyles((theme) => ({
 			backgroundColor: theme.palette.secondary.dark,
 		}
 	}
-})) 
+}))
 
 export default AboutStyles;
