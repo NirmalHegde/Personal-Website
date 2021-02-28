@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Typography, TextField } from '@material-ui/core'
+import { Grid, Typography, TextField, Button } from '@material-ui/core'
 
 import ContactStyles from './ContactStyles'
 
@@ -20,17 +20,23 @@ const Contact = () => {
 				<Grid item xs={5}>
 					<div className={classes.formContainer}>
 						<div className={classes.form}>
-							<TextField id="outlined-basic" label="Name" variant="outlined" />
+							<TextField className={classes.input} label="Name" variant="outlined" />
 							<br /><br />
-							<TextField id="outlined-basic" label="Email" variant="outlined" />
+							<TextField className={classes.input} label="Email" variant="outlined" />
 							<br /><br />
 							<TextField
-								id="outlined-multiline-static"
+								className={classes.input}
 								label="Message"
 								multiline
-								rows={8}
+								rows={10}
 								variant="outlined"
 							/>
+							<br /><br />
+							<div className={classes.center}>
+							<Button variant="contained" size="large" className={classes.button}>
+								Submit
+      				</Button>
+							</div>
 						</div>
 					</div>
 				</Grid>

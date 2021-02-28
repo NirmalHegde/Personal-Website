@@ -16,7 +16,26 @@ const ContactStyles = makeStyles((theme) => ({
 		position: "absolute",
 		top: "50%",
 		left: "50%",
-		transform: "translate(-50%, -50%)"
+		transform: "translate(-100%, -50%)"
+	},
+	input: {
+		width: "200%"
+	},
+	center: {
+		display: "flex",
+		justifyContent: "center",
+		width: "200%"
+	},
+	button: {
+		backgroundColor: "#b5befa",
+		borderRadius: 20,
+		marginRight: "2%",
+		textTransform: "none",
+		"&:hover": {
+			transition: "0.3s",
+			color: "#ffffff",
+			backgroundColor: theme.palette.secondary.dark,
+		}
 	}
 }))
 
