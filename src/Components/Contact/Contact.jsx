@@ -28,7 +28,7 @@ const Contact = () => {
 								id="outlined-multiline-static"
 								label="Message"
 								multiline
-								rows={4}
+								rows={8}
 								variant="outlined"
 							/>
 						</div>
