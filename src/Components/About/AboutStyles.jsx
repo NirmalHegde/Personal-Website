@@ -8,7 +8,11 @@ const AboutStyles = makeStyles((theme) => ({
 		textAlign: "center",
 		color: theme.palette.secondary.dark
 	},
-	resumeButton: {
+	subTitle: {
+    fontWeight: "600",
+		paddingBottom: "2%"
+	},
+	button: {
 		backgroundColor: "#b5befa",
 		borderRadius: 20,
 		marginRight: "2%",

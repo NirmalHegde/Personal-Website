@@ -73,6 +73,7 @@ const Particle = () => {
 						"value": 200
 					},
 					"opacity": {
+						"value": 0.5,
 						"random": {
 							"enable": true
 						},
@@ -81,7 +82,51 @@ const Particle = () => {
 							"speed": 1
 						}
 					},
+					"shape": {
+						"options": {
+							"character": {
+								"value": [
+									"</>",
+									"==",
+									"{}",
+									"!=",
+									"&&",
+									";",
+									"*",
+									"()",
+									"def",
+									"for",
+									"if"
+								],
+								"font": "Roboto Mono",
+								"style": "",
+								"weight": "400",
+								"fill": true
+							},
+							"char": {
+								"value": [
+									"</>",
+									"==",
+									"{}",
+									"!=",
+									"&&",
+									";",
+									"*",
+									"()",
+									"def",
+									"for",
+									"if"
+								],
+								"font": "Verdana",
+								"style": "10",
+								"weight": "400",
+								"fill": true
+							}
+						},
+						"type": "char"
+					},
 					"size": {
+						"value": 7,
 						"random": {
 							"enable": true
 						},

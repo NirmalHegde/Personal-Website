@@ -20,8 +20,9 @@ const About = () => {
 
 				</Grid>
 				<Grid item xs={5}>
-					<Typography variant="body2">
-						I am a first year Computer Science student at the University of Waterloo.
+					<Typography variant="h5" className={classes.subTitle}>Bonjour</Typography>
+					<Typography variant="body1">
+						I am a 1B Systems Design Engineering student at the University of Waterloo.
 						Currently, I am working on several projects which include programming a Sign-Language Detector
 						and building e-commerce websites for various businesses. These projects showcase my love of coding and
 						design. Previously, I have worked on various web development projects and
@@ -33,28 +34,20 @@ const About = () => {
 					<br />
 					<Divider />
 					<br />
-					<Typography variant="body2">
-						Links
-					</Typography>
+					<Typography variant="h5" className={classes.subTitle}>My Skills</Typography>
 					<br />
 					<Divider />
 					<br />
-					<Typography variant="body2">
-						Skills
-					</Typography>
-					<br />
-					<Divider />
-					<br />
-					<Button variant="contained" size="large" className={classes.resumeButton} startIcon={<AttachFileIcon />}>
+					<Button variant="contained" size="large" className={classes.button} startIcon={<AttachFileIcon />}>
 						Resume
       		</Button>
-					<Button variant="contained" size="large" className={classes.resumeButton} startIcon={<AttachFileIcon />}>
+					<Button variant="contained" size="large" className={classes.button} startIcon={<AttachFileIcon />}>
 						LinkedIn
       		</Button>
-					<Button variant="contained" size="large" className={classes.resumeButton} startIcon={<AttachFileIcon />}>
+					<Button variant="contained" size="large" className={classes.button} startIcon={<AttachFileIcon />}>
 						Github
       		</Button>
-					<Button variant="contained" size="large" className={classes.resumeButton} startIcon={<AttachFileIcon />}>
+					<Button variant="contained" size="large" className={classes.button} startIcon={<AttachFileIcon />}>
 						Email
       		</Button>
 				</Grid>
