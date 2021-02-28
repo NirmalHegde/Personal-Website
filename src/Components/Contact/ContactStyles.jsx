@@ -19,7 +19,25 @@ const ContactStyles = makeStyles((theme) => ({
 		transform: "translate(-100%, -50%)"
 	},
 	input: {
-		width: "200%"
+		width: "200%",
+		fontWeight: "600",
+		'& label.Mui-focused': {
+      color: theme.palette.secondary.dark,
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: theme.palette.secondary.dark,
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: '#b5befa',
+      },
+      '&:hover fieldset': {
+        borderColor: theme.palette.secondary.dark,
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: theme.palette.secondary.dark,
+      },
+    },
 	},
 	center: {
 		display: "flex",

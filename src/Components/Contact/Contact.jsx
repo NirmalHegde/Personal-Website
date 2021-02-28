@@ -1,10 +1,34 @@
 import React from 'react'
 import { Grid, Typography, TextField, Button } from '@material-ui/core'
+import { db } from "../../firebaseConfig";
 
 import ContactStyles from './ContactStyles'
 
 const Contact = () => {
 	const classes = ContactStyles();
+
+	const [name, setName] = React.useState("");
+	const [email, setEmail] = React.useState("");
+	const [message, setMessage] = React.useState("");
+
+	const submitHander = (e) => {
+		e.preventDefault();
+		db.collection('contacts').add({
+			name: name,
+			email: email,
+			message: message
+		})
+			.then(() => {
+				alert('Message has been submitted 🚀');
+			})
+			.catch((err) => {
+				alert(err.message);
+			});
+		setName('');
+		setEmail('');
+		setMessage('');
+	}
+
 	return (
 		<div id="contact" className={classes.size}>
 			<Grid container>
@@ -19,13 +43,27 @@ const Contact = () => {
 				</Grid>
 				<Grid item xs={5}>
 					<div className={classes.formContainer}>
-						<div className={classes.form}>
-							<TextField className={classes.input} label="Name" variant="outlined" />
-							<br /><br />
-							<TextField className={classes.input} label="Email" variant="outlined" />
+						<form onSubmit={submitHander} className={classes.form}>
+							<TextField
+								className={classes.input}
+								value={name}
+								onChange={(e) => setName(e.target.value)}
+								label="Name"
+								variant="outlined"
+							/>
 							<br /><br />
 							<TextField
 								className={classes.input}
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+								label="Email"
+								variant="outlined"
+							/>
+							<br /><br />
+							<TextField
+								className={classes.input}
+								value={message}
+								onChange={(e) => setMessage(e.target.value)}
 								label="Message"
 								multiline
 								rows={10}
@@ -33,11 +71,11 @@ const Contact = () => {
 							/>
 							<br /><br />
 							<div className={classes.center}>
-							<Button variant="contained" size="large" className={classes.button}>
-								Submit
-      				</Button>
+								<Button type="submit" variant="contained" size="large" className={classes.button}>
+									Submit
+      					</Button>
 							</div>
-						</div>
+						</form>
 					</div>
 				</Grid>
 				<Grid item xs={1}></Grid>
