@@ -10,8 +10,7 @@ const Home = () => {
 		<div id="home" className={classes.size}>
 			<Grid container>
 				<Grid item xs={1}></Grid>
-				<Grid item container xs={10}>
-					<Grid item xs={6}>
+				<Grid item xs={10}>
 						<div className={classes.title}>
 							<div>
 								<br />
@@ -33,10 +32,6 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-					</Grid>
-					<Grid item xs={6}>
-
-					</Grid>
 				</Grid>
 			</Grid>
 		</div>

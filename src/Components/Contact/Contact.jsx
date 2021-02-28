@@ -18,16 +18,12 @@ const Contact = () => {
 
 				</Grid>
 				<Grid item xs={5}>
-					<div className={classes.formSpacing}></div>
-					<div className={classes.align}>
+				<div className={classes.formContainer}>
+				<div className={classes.form}>
 						<TextField id="outlined-basic" label="Name" variant="outlined" />
-					</div>
-					<br />
-					<div className={classes.align}>
+					<br /><br />
 					<TextField id="outlined-basic" label="Email" variant="outlined" />
-					</div>
-					<br />
-					<div className={classes.align}>
+					<br /><br />
 						<TextField
 							id="outlined-multiline-static"
 							label="Message"
@@ -35,7 +31,8 @@ const Contact = () => {
 							rows={4}
 							variant="outlined"
 						/>
-					</div>
+				</div>
+				</div>
 				</Grid>
 				<Grid item xs={1}></Grid>
 			</Grid>

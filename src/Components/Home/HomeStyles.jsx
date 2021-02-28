@@ -7,6 +7,8 @@ const HomeStyles = makeStyles((theme) => ({
 	title: {
 		display: "flex",
 		alignItems: "center",
+		justifyContent: "center",
+		textAlign: "center",
 		height: "100vh"
 	},
 	titleText: {

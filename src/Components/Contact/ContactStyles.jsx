@@ -8,17 +8,15 @@ const ContactStyles = makeStyles((theme) => ({
 		textAlign: "center",
 		color: theme.palette.secondary.dark
 	},
-	form: {
+	formContainer: {
 		height: "76.5vh",
-		display: "flex",
-		alignItem: "center"
+		position: "relative"
 	},
-	align: {
-		display: "flex",
-		justifyContent: "center"
-	},
-	formSpacing: {
-		height: "20vh"
+	form: {
+		position: "absolute",
+		top: "50%",
+		left: "50%",
+		transform: "translate(-50%, -50%)"
 	}
 })) 
 

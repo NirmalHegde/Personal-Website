@@ -77,10 +77,18 @@ const Navbar = () => {
                                 onKeyDown={toggleDrawer("left", false)}
                             >
                                 <Tabs textColor="primary" orientation="vertical">
-                                    <Tab className={classes.tabs} label="Home" />
-                                    <Tab className={classes.tabs} label="Projects" />
-                                    <Tab className={classes.tabs} label="Resume" />
-                                    <Tab className={classes.tabs} label="Contact" />
+                                    <Link smooth="true" duration={1000} to="home">
+                                        <Tab onClick={toggleDrawer("left", false)} className={classes.tabs} label="Home" />
+                                    </Link>
+                                    <Link smooth="true" duration={1000} offset={-70} to="about">
+                                        <Tab onClick={toggleDrawer("left", false)} className={classes.tabs} label="About" />
+                                    </Link>
+                                    <Link smooth="true" duration={1000} offset={-70} to="projects">
+                                        <Tab onClick={toggleDrawer("left", false)} className={classes.tabs} label="Projects" />
+                                    </Link>
+                                    <Link smooth="true" duration={1000} offset={-70} to="contact">
+                                        <Tab onClick={toggleDrawer("left", false)} className={classes.tabs} label="Contact" />
+                                    </Link>
                                 </Tabs>
                             </div>
                         </Drawer>
