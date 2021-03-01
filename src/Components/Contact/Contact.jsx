@@ -24,6 +24,7 @@ const Contact = () => {
 			.catch((err) => {
 				alert(err.message);
 			});
+		console.log(process.env);
 		setName('');
 		setEmail('');
 		setMessage('');
