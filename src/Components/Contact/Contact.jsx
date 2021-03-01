@@ -7,7 +7,6 @@ import ContactStyles from './ContactStyles'
 const Contact = () => {
 	const classes = ContactStyles();
 
-	const md = useMediaQuery('(max-width: 960px)');
 	const lg = useMediaQuery('(min-width: 960px)');
 
 	const [name, setName] = React.useState("");
