@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Typography } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
 import Typewriter from "typewriter-effect"
 
 import HomeStyles from './HomeStyles'

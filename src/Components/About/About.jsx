@@ -7,8 +7,6 @@ import AboutStyles from './AboutStyles'
 const About = () => {
 	const classes = AboutStyles();
 
-	const desktop = useMediaQuery('(min-width: 1210px)');
-	const mobile = useMediaQuery('(max-width: 1210px)');
 	const md = useMediaQuery('(max-width: 960px)');
 
 	return (
@@ -23,7 +21,7 @@ const About = () => {
 			<Grid item xs={12} md={5}>
 
 			</Grid>
-			{mobile && <Grid item xs={1}></Grid>}
+			{md && <Grid item xs={1}></Grid>}
 			<Grid item xs={10} md={5}>
 				<Typography variant="h6" className={classes.subTitle} display="inline">My name is Nirmal Hegde and I am a</Typography>
 				<Typography variant="h6" style={{ color: "#8c97e1" }} className={classes.subTitle} display="inline"> Software Developer</Typography>
@@ -86,7 +84,7 @@ const About = () => {
 					</Grid>
 				</Grid>
 			</Grid>
-			{mobile && <Grid item xs={1}></Grid>}
+			{md && <Grid item xs={1}></Grid>}
 			<Grid item xs={12}>
 				<div style={{ paddingBottom: "5%" }} />
 			</Grid>
