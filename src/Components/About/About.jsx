@@ -20,11 +20,11 @@ const About = () => {
 				<br />
 			</Grid>
 			<Grid item xs={1}></Grid>
-			<Grid item xs={12} sm={5}>
+			<Grid item xs={12} md={5}>
 
 			</Grid>
 			{mobile && <Grid item xs={1}></Grid>}
-			<Grid item xs={10} sm={5}>
+			<Grid item xs={10} md={5}>
 				<Typography variant="h6" className={classes.subTitle} display="inline">My name is Nirmal Hegde and I am a</Typography>
 				<Typography variant="h6" style={{ color: "#8c97e1" }} className={classes.subTitle} display="inline"> Software Developer</Typography>
 				<div style={{ paddingBottom: "2%" }} />
