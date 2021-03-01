@@ -9,6 +9,7 @@ const About = () => {
 
 	const desktop = useMediaQuery('(min-width: 1210px)');
 	const mobile = useMediaQuery('(max-width: 1210px)');
+	const md = useMediaQuery('(max-width: 960px)');
 
 	return (
 		<Grid id="about" container>
@@ -51,33 +52,37 @@ const About = () => {
 				<Divider />
 				<br />
 				<Grid container>
-					<Grid item xs={3}>
+					<Grid item xs={12} md={3}>
 						<div className={classes.buttonSpacing}>
 							<Button variant="contained" size="large" className={classes.button} startIcon={<AttachFileIcon />}>
 								Resume
       				</Button>
 						</div>
+						{md && <br />}
 					</Grid>
-					<Grid item xs={3}>
+					<Grid item xs={12} md={3}>
 						<div className={classes.buttonSpacing}>
 							<Button variant="contained" size="large" className={classes.button} startIcon={<AttachFileIcon />}>
 								Github
       				</Button>
 						</div>
+						{md && <br />}
 					</Grid>
-					<Grid item xs={3}>
+					<Grid item xs={12} md={3}>
 						<div className={classes.buttonSpacing}>
 							<Button variant="contained" size="large" className={classes.button} startIcon={<AttachFileIcon />}>
 								LinkedIn
       				</Button>
 						</div>
+						{md && <br />}
 					</Grid>
-					<Grid item xs={3}>
+					<Grid item xs={12} md={3}>
 						<div className={classes.buttonSpacing}>
 							<Button variant="contained" size="large" className={classes.button} startIcon={<AttachFileIcon />}>
 								Email
       				</Button>
 						</div>
+						{md && <br />}
 					</Grid>
 				</Grid>
 			</Grid>

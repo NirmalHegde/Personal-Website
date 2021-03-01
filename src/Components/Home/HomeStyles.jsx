@@ -12,13 +12,12 @@ const HomeStyles = makeStyles((theme) => ({
 		height: "100vh"
 	},
 	titleText: {
-		color: theme.palette.primary.main
+		color: theme.palette.primary.main,
 	},
 	inline: {
-		display: "flex",
 		color: theme.palette.primary.main,
 		fontFamily: "Poppins",
-		fontSize: "2rem"
+		fontSize: "1.6rem"
 	}
 }))
 
