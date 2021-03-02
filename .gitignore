@@ -6,6 +6,7 @@
 .pnp.js
 .env
 .eslintcache
+package-lock.json
 
 # testing
 /coverage
