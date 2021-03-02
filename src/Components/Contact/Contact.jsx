@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Typography, TextField, Button, useMediaQuery } from '@material-ui/core'
 import { db } from "../../firebaseConfig";
-
+import emailjs from 'emailjs-com'
 import ContactStyles from './ContactStyles'
 
 const Contact = () => {
@@ -22,31 +22,43 @@ const Contact = () => {
 		setErrorName(false);
 		setErrorEmail(false);
 		setErrorMessage(false);
-		
+		console.log(process.env);
+
 		if (name === "" || !emailRegex.test(email) || message === "") {
 			if (name === "") {
 				setErrorName(true);
 			}
-	
+
 			if (!emailRegex.test(email)) {
 				setErrorEmail(true);
 			}
-	
+
 			if (message === "") {
 				setErrorMessage(true);
 			}
 		} else {
-			db.collection('contacts').add({
+			const emailObject = {
 				name: name,
 				email: email,
 				message: message
-			})
+			}
+			
+			db.collection('contacts').add(emailObject)
 				.then(() => {
-					alert('Message has been submitted 🚀');
+					console.log('submitted to Firebase');
 				})
 				.catch((err) => {
-					alert(err.message);
+					console.log(err.message);
 				});
+
+			emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, emailObject, process.env.REACT_APP_USER_ID)
+				.then((result) => {
+					console.log(result.text);
+					alert('Message has been submitted 🚀');
+				}, (err) => {
+					console.log(err.text);
+				});
+			
 			setName('');
 			setEmail('');
 			setMessage('');
