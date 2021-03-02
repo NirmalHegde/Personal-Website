@@ -1,11 +1,14 @@
 import React from 'react'
 import { Card, CardActionArea, CardContent, CardMedia, CardActions, Typography, Button } from '@material-ui/core'
+import ProjectsCardStyles from './ProjectsCardsStyles'
 
 const ProjectsCards = (props) => {
 	const { demo, demoTitle, demoDetails, gitHub } = props;
 
+	const classes = ProjectsCardStyles()
+
 	return (
-		<Card>
+		<Card className={classes.root}>
 			<CardActionArea>
 				<CardMedia
 					component="img"
