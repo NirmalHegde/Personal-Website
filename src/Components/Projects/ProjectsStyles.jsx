@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/styles';
 
-const ResumeStyles = makeStyles((theme) => ({
+const ProjectsStyles = makeStyles((theme) => ({
 	root: {
 		background: theme.palette.primary.dark
 	},
@@ -16,4 +16,4 @@ const ResumeStyles = makeStyles((theme) => ({
 	}
 }))
 
-export default ResumeStyles;
+export default ProjectsStyles;

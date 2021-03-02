@@ -6,8 +6,8 @@ const Footer = () => {
 	return (
 		<div className={classes.footer}>
 			<span>Created by&nbsp;</span>
-			<span className={classes.footerName}>Nirmal &nbsp;</span>
-			<span>|&nbsp; Reach for the ✨&nbsp; | &nbsp;&#169; 2021 All rights reserved</span>
+			<span style={{color: "#b5befa"}}>Nirmal &nbsp;</span>
+			<span>|&nbsp; Reach for the ✨</span>
 		</div>
 	)
 }

@@ -10,7 +10,6 @@ const FooterStyles = makeStyles((theme) => ({
 		justifyContent: "center",
 		alignItems: "center",
 		fontFamily: "Poppins",
-		fontSize: "70%"
 	}
 }))
 
