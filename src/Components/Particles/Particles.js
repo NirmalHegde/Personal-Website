@@ -12,7 +12,7 @@ const Particle = () => {
 					},
 				},
 				fpsLimit: 60,
-				"interactivity": {
+				"interactivity": { // modes that particles will be sensed on
 					"detect_on": "window",
 					"events": {
 						"onClick": {
@@ -24,7 +24,7 @@ const Particle = () => {
 							"mode": "attract"
 						}
 					},
-					"modes": {
+					"modes": { // actions that occur
 						"attract": {
 							"distance": 300,
 							"duration": 2,
@@ -38,7 +38,7 @@ const Particle = () => {
 						}
 					}
 				},
-				"particles": {
+				"particles": { // visual properties of particles
 					"color": {
 						"value": "#ffffff"
 					},
@@ -117,7 +117,7 @@ const Particle = () => {
 									"for",
 									"if"
 								],
-								"font": "Verdana",
+								"font": "Roboto Mono",
 								"style": "10",
 								"weight": "400",
 								"fill": true

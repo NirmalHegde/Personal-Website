@@ -1,8 +1,11 @@
+// dependancy/file imports
 import React from 'react'
 import FooterStyles from './FooterStyles'
 
 const Footer = () => {
+	// css import
 	const classes = FooterStyles();
+	
 	return (
 		<div className={classes.footer}>
 			<span>Created by&nbsp;</span>
