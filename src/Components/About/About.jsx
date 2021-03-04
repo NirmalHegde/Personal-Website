@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid, Typography, Divider, Button, useMediaQuery, Fade } from '@material-ui/core'
+import { Link } from 'react-scroll'
 import { FaRegFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 
@@ -119,35 +120,43 @@ const About = () => {
 				<br />
 				<Grid container>
 					<Grid item xs={12} md={3}>
-						<div className={classes.buttonSpacing}>
-							<Button variant="contained" size="large" className={classes.button} startIcon={<FaRegFilePdf />}>
-								Resume
-      				</Button>
-						</div>
+						<a rel="noreferrer" target="_blank" href={links["Resume"]} className={classes.links}>
+							<div className={classes.buttonSpacing}>
+								<Button variant="contained" size="large" className={classes.button} startIcon={<FaRegFilePdf />}>
+									Resume
+      					</Button>
+							</div>
+						</a>
 						{md && <br />}
 					</Grid>
 					<Grid item xs={12} md={3}>
-						<div className={classes.buttonSpacing}>
-							<Button variant="contained" size="large" className={classes.button} startIcon={<FaGithub />}>
-								Github
-      				</Button>
-						</div>
+						<a rel="noreferrer" target="_blank" href={links["Github"]} className={classes.links}>
+							<div className={classes.buttonSpacing}>
+								<Button variant="contained" size="large" className={classes.button} startIcon={<FaGithub />}>
+									Github
+      					</Button>
+							</div>
+						</a>
 						{md && <br />}
 					</Grid>
 					<Grid item xs={12} md={3}>
-						<div className={classes.buttonSpacing}>
-							<Button variant="contained" size="large" className={classes.button} startIcon={<FaLinkedin />}>
-								LinkedIn
-      				</Button>
-						</div>
+						<a rel="noreferrer" target="_blank" href={links["LinkedIn"]} className={classes.links}>
+							<div className={classes.buttonSpacing}>
+								<Button variant="contained" size="large" className={classes.button} startIcon={<FaLinkedin />}>
+									LinkedIn
+      						</Button>
+							</div>
+						</a>
 						{md && <br />}
 					</Grid>
 					<Grid item xs={12} md={3}>
-						<div className={classes.buttonSpacing}>
-							<Button variant="contained" size="large" className={classes.button} startIcon={<MdEmail />}>
-								Email
-      				</Button>
-						</div>
+						<Link smooth="true" duration={1000} offset={-70} to="contact">
+							<div className={classes.buttonSpacing}>
+								<Button variant="contained" size="large" className={classes.button} startIcon={<MdEmail />}>
+									Email
+      					</Button>
+							</div>
+						</Link>
 						{md && <br />}
 					</Grid>
 				</Grid>

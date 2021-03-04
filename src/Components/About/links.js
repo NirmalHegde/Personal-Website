@@ -19,6 +19,7 @@ import vscode from './Assets/vscode.png'
 import solidworks from './Assets/solidworks.png'
 import autocad from './Assets/autocad.png'
 import heroku from './Assets/heroku.png'
+import resume from './Assets/resume.pdf'
 
 export const links = {
 	default: profile,
@@ -41,5 +42,8 @@ export const links = {
 	"VS Code": vscode,
 	SolidWorks: solidworks,
 	AutoCAD: autocad,
-	Heroku: heroku
+	Heroku: heroku,
+	Resume: resume,
+	Github: "https://github.com/NirmalHegde",
+	LinkedIn: "https://www.linkedin.com/in/nirmalhegde"
 }

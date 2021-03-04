@@ -47,6 +47,9 @@ const AboutStyles = makeStyles((theme) => ({
 	buttonSpacing: {
 		display: "flex",
 		justifyContent: "center"
+	},
+	links: {
+		textDecoration: "none"
 	}
 }))
 
