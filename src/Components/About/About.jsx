@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, Typography, Divider, Button, useMediaQuery, Fade } from '@material-ui/core'
-import AttachFileIcon from '@material-ui/icons/AttachFile';
+import { FaRegFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
 
 import AboutStyles from './AboutStyles'
 import { links } from './links'
@@ -119,7 +120,7 @@ const About = () => {
 				<Grid container>
 					<Grid item xs={12} md={3}>
 						<div className={classes.buttonSpacing}>
-							<Button variant="contained" size="large" className={classes.button} startIcon={<AttachFileIcon />}>
+							<Button variant="contained" size="large" className={classes.button} startIcon={<FaRegFilePdf />}>
 								Resume
       				</Button>
 						</div>
@@ -127,7 +128,7 @@ const About = () => {
 					</Grid>
 					<Grid item xs={12} md={3}>
 						<div className={classes.buttonSpacing}>
-							<Button variant="contained" size="large" className={classes.button} startIcon={<AttachFileIcon />}>
+							<Button variant="contained" size="large" className={classes.button} startIcon={<FaGithub />}>
 								Github
       				</Button>
 						</div>
@@ -135,7 +136,7 @@ const About = () => {
 					</Grid>
 					<Grid item xs={12} md={3}>
 						<div className={classes.buttonSpacing}>
-							<Button variant="contained" size="large" className={classes.button} startIcon={<AttachFileIcon />}>
+							<Button variant="contained" size="large" className={classes.button} startIcon={<FaLinkedin />}>
 								LinkedIn
       				</Button>
 						</div>
@@ -143,7 +144,7 @@ const About = () => {
 					</Grid>
 					<Grid item xs={12} md={3}>
 						<div className={classes.buttonSpacing}>
-							<Button variant="contained" size="large" className={classes.button} startIcon={<AttachFileIcon />}>
+							<Button variant="contained" size="large" className={classes.button} startIcon={<MdEmail />}>
 								Email
       				</Button>
 						</div>

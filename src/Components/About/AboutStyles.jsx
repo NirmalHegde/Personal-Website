@@ -17,6 +17,7 @@ const AboutStyles = makeStyles((theme) => ({
 		alignItems: "center"
 	},
 	profilePic: {
+		transition: "0.3s",
 		width: "80%",
 		height: "auto",
 		"&:hover": {
