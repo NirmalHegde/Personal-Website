@@ -2,7 +2,13 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 //Theme setup for UI
 const theme = createMuiTheme({
-  //change primary font to Montserrat for whole website
+
+  breakpoints: {
+    values: {
+      md: 1100
+    }
+  },
+
   typography: {
     fontFamily: "Poppins, Roboto, Arial, sans-serif",
     h1: {
@@ -21,7 +27,6 @@ const theme = createMuiTheme({
     }
   },
 
-  //set colour pallete
   palette: {
     primary: {
       main: "#ffffff",

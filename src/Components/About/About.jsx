@@ -1,16 +1,22 @@
+// dependancies
 import React from 'react'
 import { Grid, Typography, Divider, Button, useMediaQuery, Fade } from '@material-ui/core'
 import { Link } from 'react-scroll'
+
+// icons
 import { FaRegFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 
+// file imports
 import AboutStyles from './AboutStyles'
 import { links } from './links'
 
 const About = () => {
+	// classes and queries
 	const classes = AboutStyles();
-	const md = useMediaQuery('(max-width: 960px)');
+	const md = useMediaQuery('(max-width: 1100px)');
 
+	// variable declaration and values for mapping
 	const [image, setImage] = React.useState(links["default"]);
 	const [fade, setFade] = React.useState(true)
 	const languages = ["Javascript,", "HTML,", "CSS,", "C,", "C++,", "Python"];
@@ -18,21 +24,23 @@ const About = () => {
 	const backend = ["Node,", "Express,", "Firebase,", "MongoDB,", "Puppeteer"];
 	const tools = ["Git,", "Jest,", "VS Code,", "SolidWorks,", "AutoCAD,", "Heroku"];
 
+	// handling for changing the image
 	const imageHandler = (language) => {
 		setFade(false);
 		setTimeout(() => {
-			setImage(links[language.replace(",", "")]);
+			setImage(links[language.replace(",", "")]); // replace needed to remove the comma
 			setFade(true);
 		}, 300);
 	}
 
 	return (
 		<Grid id="about" container>
+			{/* Title Section */}
 			<Grid className={classes.title} item xs={12}>
 				<br />
 				<Typography variant="h2">About Me</Typography>
 				<Typography variant="h4">~ Who am I? ~</Typography>
-				<br />
+				<br /><br />
 			</Grid>
 			<Grid item xs={1}></Grid>
 			{md && <Grid item xs={1}></Grid>}
@@ -45,6 +53,8 @@ const About = () => {
 				</Grid>
 			</Fade>
 			{md && <Grid item xs={1}></Grid>}
+
+			{/* Text Section */}
 			<Grid item xs={10} md={5}>
 				<Typography variant="h6" className={classes.subTitle} display="inline">My name is Nirmal Hegde and I am a</Typography>
 				<Typography variant="h6" style={{ color: "#8c97e1" }} className={classes.subTitle} display="inline"> Software Developer</Typography>
@@ -63,6 +73,8 @@ const About = () => {
 				<Typography variant="h6" className={classes.subTitle} display="inline">Here are </Typography>
 				<Typography variant="h6" style={{ color: "#8c97e1" }} className={classes.subTitle} display="inline">My Skills!</Typography>
 				<div style={{ paddingBottom: "2%" }} />
+
+				{/* Mapping for languages */}
 				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Languages: &nbsp;</Typography>
 				{languages.map(language =>
 					<Typography
@@ -76,6 +88,8 @@ const About = () => {
 					</Typography>
 				)}
 				<div />
+
+				{/* Mapping for frontend */}
 				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Frontend: &nbsp;</Typography>
 				{frontend.map(frontend =>
 					<Typography
@@ -89,6 +103,8 @@ const About = () => {
 					</Typography>
 				)}
 				<div />
+
+				{/* Mapping for backend */}
 				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Backend: &nbsp;</Typography>
 				{backend.map(backend =>
 					<Typography
@@ -102,6 +118,8 @@ const About = () => {
 					</Typography>
 				)}
 				<div />
+
+				{/* Mapping for tools */}
 				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Tools: &nbsp;</Typography>
 				{tools.map(tool =>
 					<Typography
@@ -118,6 +136,8 @@ const About = () => {
 				<br />
 				<Divider />
 				<br />
+
+				{/* Grid section */}
 				<Grid container>
 					<Grid item xs={12} md={3}>
 						<a rel="noreferrer" target="_blank" href={links["Resume"]} className={classes.links}>
@@ -162,8 +182,10 @@ const About = () => {
 				</Grid>
 			</Grid>
 			{md && <Grid item xs={1}></Grid>}
+
+			{/* Bottom spacing */}
 			<Grid item xs={12}>
-				<div style={{ paddingBottom: "5%" }} />
+				<div style={{ paddingBottom: "7%" }} />
 			</Grid>
 		</Grid>
 	)
