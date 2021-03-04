@@ -14,7 +14,7 @@ const About = () => {
 	const languages = ["Javascript,", "HTML,", "CSS,", "C,", "C++,", "Python"];
 	const frontend = ["React,", "Vue,", "Material-UI"];
 	const backend = ["Node,", "Express,", "Firebase,", "MongoDB,", "Puppeteer"];
-	const tools = ["Git,", "JEST,", "VS Code,", "SolidWorks,", "AutoCAD,", "Heroku"];
+	const tools = ["Git,", "Jest,", "VS Code,", "SolidWorks,", "AutoCAD,", "Heroku"];
 
 	const imageHandler = (language) => {
 		setFade(false);
