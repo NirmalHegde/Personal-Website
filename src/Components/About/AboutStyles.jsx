@@ -11,6 +11,19 @@ const AboutStyles = makeStyles((theme) => ({
 	subTitleSmall: {
 		fontWeight: "600"
 	},
+	picSpacing: {
+		height: "100%",
+		display: "flex",
+		alignItems: "center"
+	},
+	profilePic: {
+		width: "80%",
+		height: "auto",
+		"&:hover": {
+			transition: "0.3s",
+			boxShadow: "0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+		}
+	},
 	button: {
 		backgroundColor: "#b5befa",
 		borderRadius: 20,

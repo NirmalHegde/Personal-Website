@@ -76,7 +76,7 @@ const Contact = () => {
 				<Typography variant="h4">~ Can't Wait to Connect! ~</Typography>
 			</Grid>
 			<Grid item xs={1}></Grid>
-			<Grid item xs={10} md={5}>
+			<Grid item xs={10} md={4}>
 				<div className={classes.formContainer}>
 					<form onSubmit={submitHander} className={classes.form}>
 						<TextField
@@ -119,7 +119,7 @@ const Contact = () => {
 					</form>
 				</div>
 			</Grid>
-			{lg && <Grid item xs={5}></Grid>}
+			{lg && <Grid item xs={6}></Grid>}
 			<Grid item xs={1}></Grid>
 		</Grid>
 	)

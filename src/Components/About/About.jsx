@@ -1,13 +1,20 @@
 import React from 'react'
-import { Grid, Typography, Divider, Button, useMediaQuery } from '@material-ui/core'
+import { Grid, Typography, Divider, Button, useMediaQuery, Fade } from '@material-ui/core'
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 
 import AboutStyles from './AboutStyles'
+import { links } from './links'
 
 const About = () => {
 	const classes = AboutStyles();
-
 	const md = useMediaQuery('(max-width: 960px)');
+
+	const [image, setImage] = React.useState(links["default"]);
+	const languages = ["HTML,", "CSS,", "Javascript,", "Python"];
+
+	const imageHandler = (language) => {
+		setImage(links[language.replace(",","")])
+	}
 
 	return (
 		<Grid id="about" container>
@@ -18,8 +25,12 @@ const About = () => {
 				<br />
 			</Grid>
 			<Grid item xs={1}></Grid>
-			<Grid item xs={12} md={5}>
-
+			{md && <Grid item xs={1}></Grid>}
+			<Grid item xs={10} md={5}>
+				<div className={classes.picSpacing}>
+					<img alt="Display" src={image} className={classes.profilePic}></img>
+				</div>
+				<br /><br /><br />
 			</Grid>
 			{md && <Grid item xs={1}></Grid>}
 			<Grid item xs={10} md={5}>
@@ -28,24 +39,34 @@ const About = () => {
 				<div style={{ paddingBottom: "2%" }} />
 				<Typography variant="body1">
 					I am a 1B Systems Design Engineering student at the University of Waterloo.
-					Currently, I am working on several projects which include programming a Sign-Language Detector
-					and building e-commerce websites for various businesses. These projects showcase my love of coding and
-					design. Previously, I have worked on various web development projects and
-					tutored many kids on computer science and math. Some on my hobbies are playing sports,
-					Graphic Designing and exploring various AI and ML algorithms. I also help out in the community
-					by volunteering and knitting blankets for animal shelters! Currently, I am seeking
-					internships for Fall 2021.
-					</Typography>
+					Throughout my life, I have loved Swimming, Basketball, and helping those in my community through
+					various volunteering activities. Currently, I am working on creating a class profile for my SYDE cohort
+					to give insight to the public about the people who attend the program (ex: Demographics, Interests, etc.)
+					If you would like to get in touch with me, feel free to reach out through any of the links below!
+					<b>&nbsp;Currrently seeking internships for fall 2021.</b>
+				</Typography>
 				<br />
 				<Divider />
 				<br />
 				<Typography variant="h6" className={classes.subTitle} display="inline">Here are </Typography>
 				<Typography variant="h6" style={{ color: "#8c97e1" }} className={classes.subTitle} display="inline">my skills!</Typography>
 				<div style={{ paddingBottom: "2%" }} />
-				<Typography variant="body1" className={classes.subTitleSmall}>Languages: </Typography>
-				<Typography variant="body1" className={classes.subTitleSmall}>Frontend: </Typography>
-				<Typography variant="body1" className={classes.subTitleSmall}>Backend: </Typography>
-				<Typography variant="body1" className={classes.subTitleSmall}>Tools: </Typography>
+				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Languages: </Typography>
+				{languages.map(language =>
+					<Typography
+						onMouseEnter={() => imageHandler(language)}
+						onMouseLeave={() => imageHandler("default")}
+						key={language}
+						variant="body1"
+						display="inline"
+					>
+						{language}&nbsp;
+					</Typography>
+				)}
+				<div />
+				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Frontend: </Typography>
+				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Backend: </Typography>
+				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Tools: </Typography>
 				<br />
 				<Divider />
 				<br />
