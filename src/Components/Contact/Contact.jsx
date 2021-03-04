@@ -7,7 +7,7 @@ import ContactStyles from './ContactStyles'
 const Contact = () => {
 	const classes = ContactStyles();
 
-	const lg = useMediaQuery('(min-width: 960px)');
+	const lg = useMediaQuery('(min-width: 1100px)');
 
 	const [name, setName] = React.useState("");
 	const [email, setEmail] = React.useState("");

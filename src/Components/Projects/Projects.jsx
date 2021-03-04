@@ -9,8 +9,8 @@ import ProjectsCard from './ProjectsCard/ProjectsCards'
 const Projects = () => {
 	const classes = ProjectsStyles();
 
-	const lg = useMediaQuery('(min-width: 960px)');
-	const md = useMediaQuery('(max-width: 960px)');
+	const lg = useMediaQuery('(min-width: 1100px)');
+	const md = useMediaQuery('(max-width: 1100px)');
 	const sm = useMediaQuery('(min-width: 600px)');
 
 	const [state, setState] = React.useState(0);
