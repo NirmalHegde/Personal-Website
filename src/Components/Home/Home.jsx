@@ -1,11 +1,15 @@
+// dependancies
 import React from 'react'
 import { Typography } from '@material-ui/core'
 import Typewriter from "typewriter-effect"
 
+// file imports
 import HomeStyles from './HomeStyles'
 
 const Home = () => {
+	// css import
 	const classes = HomeStyles();
+	
 	return (
 		<div id="home" className={classes.size}>
 			<div className={classes.title}>
