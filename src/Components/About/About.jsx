@@ -10,10 +10,18 @@ const About = () => {
 	const md = useMediaQuery('(max-width: 960px)');
 
 	const [image, setImage] = React.useState(links["default"]);
-	const languages = ["HTML,", "CSS,", "Javascript,", "Python"];
+	const [fade, setFade] = React.useState(true)
+	const languages = ["Javascript,", "HTML,", "CSS,", "C,", "C++,", "Python"];
+	const frontend = ["React,", "Vue,", "Material-UI"];
+	const backend = ["Node,", "Express,", "Firebase,", "MongoDB,", "Puppeteer"];
+	const tools = ["Git,", "JEST,", "VS Code,", "SolidWorks,", "AutoCAD,", "Heroku"];
 
 	const imageHandler = (language) => {
-		setImage(links[language.replace(",","")])
+		setFade(false);
+		setTimeout(() => {
+			setImage(links[language.replace(",", "")]);
+			setFade(true);
+		}, 300);
 	}
 
 	return (
@@ -26,12 +34,14 @@ const About = () => {
 			</Grid>
 			<Grid item xs={1}></Grid>
 			{md && <Grid item xs={1}></Grid>}
-			<Grid item xs={10} md={5}>
-				<div className={classes.picSpacing}>
-					<img alt="Display" src={image} className={classes.profilePic}></img>
-				</div>
-				<br /><br /><br />
-			</Grid>
+			<Fade in={fade}>
+				<Grid item xs={10} md={5}>
+					<div className={classes.picSpacing}>
+						<img alt="Display" src={image} className={classes.profilePic}></img>
+					</div>
+					<br /><br /><br />
+				</Grid>
+			</Fade>
 			{md && <Grid item xs={1}></Grid>}
 			<Grid item xs={10} md={5}>
 				<Typography variant="h6" className={classes.subTitle} display="inline">My name is Nirmal Hegde and I am a</Typography>
@@ -49,24 +59,60 @@ const About = () => {
 				<Divider />
 				<br />
 				<Typography variant="h6" className={classes.subTitle} display="inline">Here are </Typography>
-				<Typography variant="h6" style={{ color: "#8c97e1" }} className={classes.subTitle} display="inline">my skills!</Typography>
+				<Typography variant="h6" style={{ color: "#8c97e1" }} className={classes.subTitle} display="inline">My Skills!</Typography>
 				<div style={{ paddingBottom: "2%" }} />
-				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Languages: </Typography>
+				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Languages: &nbsp;</Typography>
 				{languages.map(language =>
 					<Typography
 						onMouseEnter={() => imageHandler(language)}
 						onMouseLeave={() => imageHandler("default")}
+						className={classes.skills}
 						key={language}
 						variant="body1"
-						display="inline"
 					>
 						{language}&nbsp;
 					</Typography>
 				)}
 				<div />
-				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Frontend: </Typography>
-				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Backend: </Typography>
-				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Tools: </Typography>
+				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Frontend: &nbsp;</Typography>
+				{frontend.map(frontend =>
+					<Typography
+						onMouseEnter={() => imageHandler(frontend)}
+						onMouseLeave={() => imageHandler("default")}
+						className={classes.skills}
+						key={frontend}
+						variant="body1"
+					>
+						{frontend}&nbsp;
+					</Typography>
+				)}
+				<div />
+				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Backend: &nbsp;</Typography>
+				{backend.map(backend =>
+					<Typography
+						onMouseEnter={() => imageHandler(backend)}
+						onMouseLeave={() => imageHandler("default")}
+						className={classes.skills}
+						key={backend}
+						variant="body1"
+					>
+						{backend}&nbsp;
+					</Typography>
+				)}
+				<div />
+				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Tools: &nbsp;</Typography>
+				{tools.map(tool =>
+					<Typography
+						onMouseEnter={() => imageHandler(tool)}
+						onMouseLeave={() => imageHandler("default")}
+						className={classes.skills}
+						key={tool}
+						variant="body1"
+					>
+						{tool}&nbsp;
+					</Typography>
+				)}
+				<div />
 				<br />
 				<Divider />
 				<br />
