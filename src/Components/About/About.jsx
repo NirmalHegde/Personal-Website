@@ -173,7 +173,7 @@ const About = () => {
 						<Link smooth="true" duration={1000} offset={-70} to="contact">
 							<div className={classes.buttonSpacing}>
 								<Button variant="contained" size="large" className={classes.button} startIcon={<MdEmail />}>
-									Email
+									Contact
       					</Button>
 							</div>
 						</Link>

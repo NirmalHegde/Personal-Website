@@ -6,12 +6,12 @@ const ContactStyles = makeStyles((theme) => ({
 		color: theme.palette.secondary.dark
 	},
 	formContainer: {
-		height: "76.5vh",
+		height: "70vh",
 		position: "relative"
 	},
 	form: {
 		position: "absolute",
-		top: "50%",
+		top: "48%",
 		left: "50%",
 		transform: "translate(-100%, -50%)"
 	},
@@ -50,6 +50,15 @@ const ContactStyles = makeStyles((theme) => ({
 			transition: "0.3s",
 			color: "#ffffff",
 			backgroundColor: theme.palette.secondary.dark,
+		}
+	},
+	contact: {
+		textDecoration: "none",
+		color: "#000000",
+		cursor: "pointer",
+		"&:hover": {
+			transition: "0.3s",
+			color: "#b5befa"
 		}
 	}
 }))

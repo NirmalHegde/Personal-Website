@@ -1,7 +1,11 @@
 // dependancies
 import React from 'react'
-import { Grid, Typography, TextField, Button, useMediaQuery } from '@material-ui/core'
+import { Grid, Typography, TextField, Button, Divider } from '@material-ui/core'
 import emailjs from 'emailjs-com'
+
+// icons
+import { FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
 
 // file imports
 import { db } from "../../firebaseConfig";
@@ -10,7 +14,6 @@ import ContactStyles from './ContactStyles'
 const Contact = () => {
 	// classes and queries
 	const classes = ContactStyles();
-	const lg = useMediaQuery('(min-width: 1100px)');
 
 	// state declaration
 	const [name, setName] = React.useState("");
@@ -77,7 +80,7 @@ const Contact = () => {
 	}
 
 	return (
-		<Grid container id="contact" direction="row-reverse">
+		<Grid container id="contact">
 			{/* Title */}
 			<Grid className={classes.title} item xs={12}>
 				<br />
@@ -85,8 +88,37 @@ const Contact = () => {
 				<Typography variant="h4">~ Can't Wait to Connect! ~</Typography>
 			</Grid>
 
-			{/* Contact Form */}
 			<Grid item xs={1}></Grid>
+			<Grid item xs={5}>
+				<br /><br />
+				<Typography variant="h5"><b>Get in Touch!</b></Typography>
+				<Divider></Divider>
+				<br />
+				<MdEmail />&nbsp;
+				<Typography variant="h6" display="inline"><b> Email:</b></Typography>
+				<a rel="noreferrer" target="_blank" className={classes.contact} href="mailto:nhegde@uwaterloo.ca">
+					<Typography variant="h6" display="inline"> nhegde@uwaterloo.ca</Typography>
+				</a>
+				<div /><br />
+				<FaPhone />&nbsp;
+				<Typography variant="h6" display="inline"><b> Phone:</b></Typography>
+				<Typography className={classes.contact} variant="h6" display="inline"> 647-425-8826</Typography>
+				<div /><br />
+				<FaGithub />&nbsp;
+				<Typography variant="h6" display="inline"><b> Github:</b></Typography>
+				<a rel="noreferrer" target="_blank" className={classes.contact} href="https://www.github.com/NirmalHegde">
+					<Typography variant="h6" display="inline"> github.com/NirmalHegde</Typography>
+				</a>
+				<div /><br />
+				<FaLinkedin />&nbsp;
+				<Typography variant="h6" display="inline"><b> LinkedIn:</b></Typography>
+				<a rel="noreferrer" target="_blank" className={classes.contact} href="https://www.linkedin.com/in/NirmalHegde">
+					<Typography variant="h6" display="inline"> linkedin.com/in/NirmalHegde</Typography>
+				</a>
+			</Grid>
+			<Grid item xs={1}></Grid>
+
+			{/* Contact Form */}
 			<Grid item xs={10} md={4}>
 				<div className={classes.formContainer}>
 					<form onSubmit={submitHander} className={classes.form}>
@@ -130,11 +162,6 @@ const Contact = () => {
 					</form>
 				</div>
 			</Grid>
-			{lg && <>
-				<Grid item xs={6}>
-					
-				</Grid>
-			</>}
 			<Grid item xs={1}></Grid>
 		</Grid>
 	)
