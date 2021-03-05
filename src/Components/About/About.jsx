@@ -19,10 +19,10 @@ const About = () => {
 	// variable declaration and values for mapping
 	const [image, setImage] = React.useState(links["default"]);
 	const [fade, setFade] = React.useState(true)
-	const languages = ["Javascript,", "HTML,", "CSS,", "C,", "C++,", "Python"];
+	const languages = ["Javascript,", "Typescript,", "HTML,", "CSS,", "C,", "C++,", "Python"];
 	const frontend = ["React,", "Vue,", "Material-UI"];
 	const backend = ["Node,", "Express,", "Firebase,", "MongoDB,", "Puppeteer"];
-	const tools = ["Git,", "Jest,", "VS Code,", "SolidWorks,", "AutoCAD,", "Heroku"];
+	const tools = ["Git,", "Jest,", "RabbitMQ,", "VS Code,", "SolidWorks,", "AutoCAD,", "Heroku"];
 
 	// handling for changing the image
 	const imageHandler = (language) => {

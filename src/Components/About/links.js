@@ -2,6 +2,7 @@ import profile from './Assets/ProfilePicture.png'
 import html from './Assets/html.png'
 import css from './Assets/css.png'
 import js from './Assets/js.png'
+import ts from './Assets/ts.png'
 import python from './Assets/python.png'
 import cpp from './Assets/c++.png'
 import c from './Assets/c.png'
@@ -15,6 +16,7 @@ import mongo from './Assets/mongo.png'
 import puppeteer from './Assets/puppeteer.png'
 import git from './Assets/git.png'
 import jest from './Assets/jest.png'
+import rmq from './Assets/rmq.png'
 import vscode from './Assets/vscode.png'
 import solidworks from './Assets/solidworks.png'
 import autocad from './Assets/autocad.png'
@@ -26,6 +28,7 @@ export const links = {
 	HTML: html,
 	CSS: css,
 	Javascript: js,
+	Typescript: ts,
 	Python: python,
 	C: c,
 	"C++": cpp,
@@ -39,6 +42,7 @@ export const links = {
 	Puppeteer: puppeteer,
 	Git: git,
 	Jest: jest,
+	RabbitMQ: rmq,
 	"VS Code": vscode,
 	SolidWorks: solidworks,
 	AutoCAD: autocad,
