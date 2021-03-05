@@ -10,6 +10,10 @@ const FooterStyles = makeStyles((theme) => ({
 		justifyContent: "center",
 		alignItems: "center",
 		fontFamily: "Poppins",
+	},
+	textContainer: {
+		display: "inline-block",
+		textAlign: "center"
 	}
 }))
 
