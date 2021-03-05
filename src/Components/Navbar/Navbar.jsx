@@ -46,9 +46,12 @@ const Navbar = () => {
 
     return (
         <div>
-            <AppBar elevation={0} className={classes[navRef.current]}> {/*Static ensures header is always visible*/}
+            <AppBar elevation={0} className={classes[navRef.current]}>
                 <Toolbar>
-                    <Typography className={classes.initials}>NH.</Typography>
+                    <div style={{ marginRight: "1%" }} />
+                    <Link smooth="true" duration={1000} to="home">
+                        <Typography className={classes.initials} display="inline"><b>NH.</b></Typography>
+                    </Link>
                     <div className={classes.space} />
                     {desktop && <>
                         <Tabs aria-label="tabs">

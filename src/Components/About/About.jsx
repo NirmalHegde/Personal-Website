@@ -35,7 +35,7 @@ const About = () => {
 
 	return (
 		<Grid id="about" container>
-			{/* Title Section */}
+			{/* Title */}
 			<Grid className={classes.title} item xs={12}>
 				<br />
 				<Typography variant="h2">About Me</Typography>
@@ -54,7 +54,7 @@ const About = () => {
 			</Fade>
 			{md && <Grid item xs={1}></Grid>}
 
-			{/* Text Section */}
+			{/* Text */}
 			<Grid item xs={10} md={5}>
 				<Typography variant="h6" className={classes.subTitle} display="inline">My name is Nirmal Hegde and I am a</Typography>
 				<Typography variant="h6" style={{ color: "#8c97e1" }} className={classes.subTitle} display="inline"> Software Developer</Typography>
@@ -74,7 +74,7 @@ const About = () => {
 				<Typography variant="h6" style={{ color: "#8c97e1" }} className={classes.subTitle} display="inline">My Skills!</Typography>
 				<div style={{ paddingBottom: "2%" }} />
 
-				{/* Mapping for languages */}
+				{/* Languages */}
 				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Languages: &nbsp;</Typography>
 				{languages.map(language =>
 					<Typography
@@ -89,7 +89,7 @@ const About = () => {
 				)}
 				<div />
 
-				{/* Mapping for frontend */}
+				{/* Frontend */}
 				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Frontend: &nbsp;</Typography>
 				{frontend.map(frontend =>
 					<Typography
@@ -104,7 +104,7 @@ const About = () => {
 				)}
 				<div />
 
-				{/* Mapping for backend */}
+				{/* Backend */}
 				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Backend: &nbsp;</Typography>
 				{backend.map(backend =>
 					<Typography
@@ -119,7 +119,7 @@ const About = () => {
 				)}
 				<div />
 
-				{/* Mapping for tools */}
+				{/* Tools */}
 				<Typography variant="body1" className={classes.subTitleSmall} display="inline">Tools: &nbsp;</Typography>
 				{tools.map(tool =>
 					<Typography
@@ -137,7 +137,7 @@ const About = () => {
 				<Divider />
 				<br />
 
-				{/* Grid section */}
+				{/* Buttons */}
 				<Grid container>
 					<Grid item xs={12} md={3}>
 						<a rel="noreferrer" target="_blank" href={links["Resume"]} className={classes.links}>
@@ -183,7 +183,7 @@ const About = () => {
 			</Grid>
 			{md && <Grid item xs={1}></Grid>}
 
-			{/* Bottom spacing */}
+			{/* Bottom */}
 			<Grid item xs={12}>
 				<div style={{ paddingBottom: "7%" }} />
 			</Grid>

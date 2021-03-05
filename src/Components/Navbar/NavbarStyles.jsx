@@ -15,7 +15,12 @@ const NavbarStyles = makeStyles((theme) => ({
         fontFamily: "Poppins",
         color: "#ffffff",
         fontSize: "300%",
-        fontWeight: "400"
+        fontWeight: "400",
+        cursor: "pointer",
+        '&:hover': {
+            transition: "0.5s",
+            color: "#b5befa"
+        }
     },
     space: {
         flexGrow: 1
