@@ -122,9 +122,9 @@ const Contact = () => {
 				<br /><br /><br />
 			</Grid>
 			<Grid item xs={1}></Grid>
-			{md && <Grid item xs={1}></Grid>}
 
 			{/* Contact Form */}
+			{md && <Grid item xs={1}></Grid>}
 			<Grid item xs={10} md={4}>
 				<div className={classes.formContainer}>
 					<form onSubmit={submitHander} className={classes.form}>
