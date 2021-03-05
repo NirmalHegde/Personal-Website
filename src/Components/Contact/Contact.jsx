@@ -89,6 +89,7 @@ const Contact = () => {
 				<Typography variant="h4">~ Can't Wait to Connect! ~</Typography>
 			</Grid>
 
+			{/* Contact Text */}
 			<Grid item xs={1}></Grid>
 			<Grid item xs={10} md={5}>
 				<br /><br />
@@ -122,6 +123,7 @@ const Contact = () => {
 			</Grid>
 			<Grid item xs={1}></Grid>
 			{md && <Grid item xs={1}></Grid>}
+
 			{/* Contact Form */}
 			<Grid item xs={10} md={4}>
 				<div className={classes.formContainer}>
