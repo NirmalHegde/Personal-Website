@@ -78,16 +78,24 @@ const Navbar = () => {
                             >
                                 <Tabs orientation="vertical">
                                     <Link smooth="true" duration={1000} to="home">
-                                        <Tab onClick={toggleDrawer("left", false)} className={classes.tabs} label="Home" />
+                                        <div className={classes.drawerTabSpacing}>
+                                            <Tab onClick={toggleDrawer("left", false)} className={classes.tabs} label="Home" />
+                                        </div>
                                     </Link>
                                     <Link smooth="true" duration={1000} offset={-70} to="about">
-                                        <Tab onClick={toggleDrawer("left", false)} className={classes.tabs} label="About" />
+                                        <div className={classes.drawerTabSpacing}>
+                                            <Tab onClick={toggleDrawer("left", false)} className={classes.tabs} label="About" />
+                                        </div>
                                     </Link>
                                     <Link smooth="true" duration={1000} offset={-70} to="projects">
-                                        <Tab onClick={toggleDrawer("left", false)} className={classes.tabs} label="Projects" />
+                                        <div className={classes.drawerTabSpacing}>
+                                            <Tab onClick={toggleDrawer("left", false)} className={classes.tabs} label="Projects" />
+                                        </div>
                                     </Link>
                                     <Link smooth="true" duration={1000} offset={-70} to="contact">
-                                        <Tab onClick={toggleDrawer("left", false)} className={classes.tabs} label="Contact" />
+                                        <div className={classes.drawerTabSpacing}>
+                                            <Tab onClick={toggleDrawer("left", false)} className={classes.tabs} label="Contact" />
+                                        </div>
                                     </Link>
                                 </Tabs>
                             </div>

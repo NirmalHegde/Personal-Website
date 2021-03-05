@@ -3,12 +3,6 @@ import { createMuiTheme } from '@material-ui/core/styles';
 //Theme setup for UI
 const theme = createMuiTheme({
 
-  breakpoints: {
-    values: {
-      md: 1100
-    }
-  },
-
   typography: {
     fontFamily: "Poppins, Roboto, Arial, sans-serif",
     h1: {

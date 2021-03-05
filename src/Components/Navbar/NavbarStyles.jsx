@@ -30,6 +30,10 @@ const NavbarStyles = makeStyles((theme) => ({
             color: "#b5befa"
         }
     },
+    drawerTabSpacing: {
+        display: "flex",
+        justifyContent: "center",
+    },
     icon: {
         color: "#ffffff",
         fontSize: "115%"

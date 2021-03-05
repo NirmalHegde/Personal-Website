@@ -14,7 +14,7 @@ import { links } from './links'
 const About = () => {
 	// classes and queries
 	const classes = AboutStyles();
-	const md = useMediaQuery('(max-width: 1100px)');
+	const md = useMediaQuery('(max-width: 960px)');
 
 	// variable declaration and values for mapping
 	const [image, setImage] = React.useState(links["default"]);
