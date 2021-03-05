@@ -55,11 +55,14 @@ const ContactStyles = makeStyles((theme) => ({
 	contact: {
 		textDecoration: "none",
 		color: "#000000",
-		cursor: "pointer",
 		"&:hover": {
 			transition: "0.3s",
 			color: "#b5befa"
 		}
+	},
+	spacing: {
+		display: "flex",
+		alignItems: "center"
 	}
 }))
 

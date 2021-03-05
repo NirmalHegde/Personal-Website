@@ -1,6 +1,6 @@
 // dependancies
 import React from 'react'
-import { Grid, Typography, TextField, Button, Divider } from '@material-ui/core'
+import { Grid, Typography, TextField, Button, Divider, useMediaQuery } from '@material-ui/core'
 import emailjs from 'emailjs-com'
 
 // icons
@@ -14,6 +14,7 @@ import ContactStyles from './ContactStyles'
 const Contact = () => {
 	// classes and queries
 	const classes = ContactStyles();
+	const md = useMediaQuery('(max-width: 960px)');
 
 	// state declaration
 	const [name, setName] = React.useState("");
@@ -89,35 +90,38 @@ const Contact = () => {
 			</Grid>
 
 			<Grid item xs={1}></Grid>
-			<Grid item xs={5}>
+			<Grid item xs={10} md={5}>
 				<br /><br />
 				<Typography variant="h5"><b>Get in Touch!</b></Typography>
 				<Divider></Divider>
 				<br />
 				<MdEmail />&nbsp;
-				<Typography variant="h6" display="inline"><b> Email:</b></Typography>
+				<Typography display="inline"><b> Email:</b></Typography>
 				<a rel="noreferrer" target="_blank" className={classes.contact} href="mailto:nhegde@uwaterloo.ca">
-					<Typography variant="h6" display="inline"> nhegde@uwaterloo.ca</Typography>
+					<Typography display="inline"> nhegde@uwaterloo.ca</Typography>
 				</a>
 				<div /><br />
 				<FaPhone />&nbsp;
-				<Typography variant="h6" display="inline"><b> Phone:</b></Typography>
-				<Typography className={classes.contact} variant="h6" display="inline"> 647-425-8826</Typography>
+				<Typography display="inline"><b> Phone:</b></Typography>
+				<a rel="noreferrer" target="_blank" className={classes.contact} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">
+					<Typography className={classes.contact}  display="inline"> 647-425-8826</Typography>
+				</a>
 				<div /><br />
 				<FaGithub />&nbsp;
-				<Typography variant="h6" display="inline"><b> Github:</b></Typography>
+				<Typography display="inline"><b> Github:</b></Typography>
 				<a rel="noreferrer" target="_blank" className={classes.contact} href="https://www.github.com/NirmalHegde">
-					<Typography variant="h6" display="inline"> github.com/NirmalHegde</Typography>
+					<Typography  display="inline"> github.com/NirmalHegde</Typography>
 				</a>
 				<div /><br />
 				<FaLinkedin />&nbsp;
-				<Typography variant="h6" display="inline"><b> LinkedIn:</b></Typography>
+				<Typography display="inline"><b> LinkedIn:</b></Typography>
 				<a rel="noreferrer" target="_blank" className={classes.contact} href="https://www.linkedin.com/in/NirmalHegde">
-					<Typography variant="h6" display="inline"> linkedin.com/in/NirmalHegde</Typography>
+					<Typography  display="inline"> linkedin.com/in/NirmalHegde</Typography>
 				</a>
+				<br /><br /><br />
 			</Grid>
 			<Grid item xs={1}></Grid>
-
+			{md && <Grid item xs={1}></Grid>}
 			{/* Contact Form */}
 			<Grid item xs={10} md={4}>
 				<div className={classes.formContainer}>
