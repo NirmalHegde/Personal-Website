@@ -10,24 +10,29 @@ import NavbarStyles from "./NavbarStyles";
 
 //header section of website
 const Navbar = () => {
-
-    const classes = NavbarStyles(); //gains styles from HeaderStyles.jsx
+    // queries and classes
+    const classes = NavbarStyles();
     const desktop = useMediaQuery('(min-width: 900px)');
     const mobile = useMediaQuery('(max-width: 900px)');
 
+    // state setup
     const [state, setState] = React.useState({ left: false });
+    const [background, setBackground] = React.useState('navbarTransparent');
 
+    // event handler
     const toggleDrawer = (anchor, open) => (event) => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) { // detects if it was accidentally triggered
             return;
         }
 
         setState({ ...state, [anchor]: open });
     };
 
-    const [background, setBackground] = React.useState('navbarTransparent')
+    // ref setup
     const navRef = React.useRef();
     navRef.current = background;
+
+    // detects where the screen is, if it is above 0.1, switch to transparent background
     React.useEffect(() => {
         const handleScroll = () => {
             const show = window.scrollY > 0.1;
@@ -48,11 +53,14 @@ const Navbar = () => {
         <div>
             <AppBar elevation={0} className={classes[navRef.current]}>
                 <Toolbar>
+                    {/* Initials */}
                     <div style={{ marginRight: "1%" }} />
                     <Link smooth="true" duration={1000} to="home">
                         <Typography className={classes.initials} display="inline"><b>NH.</b></Typography>
                     </Link>
                     <div className={classes.space} />
+
+                    {/* Desktop Tabs */}
                     {desktop && <>
                         <Tabs aria-label="tabs">
                             <Link smooth="true" duration={1000} to="home">
@@ -69,6 +77,8 @@ const Navbar = () => {
                             </Link>
                         </Tabs>
                     </>}
+
+                    {/* Mobile Tabs */}
                     {mobile && <>
                         <IconButton onClick={toggleDrawer("left", true)} aria-label="menu">
                             <MenuIcon className={classes.icon} />
