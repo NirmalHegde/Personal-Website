@@ -3,7 +3,7 @@ import { Card, CardActionArea, CardContent, CardMedia, CardActions, Typography, 
 import ProjectsCardStyles from './ProjectsCardsStyles'
 
 const ProjectsCards = (props) => {
-	const { demo, demoTitle, demoDetails, gitHub } = props;
+	const { demo, demoTitle, demoDetails, source } = props;
 
 	const classes = ProjectsCardStyles()
 
@@ -27,7 +27,7 @@ const ProjectsCards = (props) => {
 				</CardContent>
 			</CardActionArea>
 			<CardActions>
-				<a rel="noreferrer" target="_blank" href={gitHub}>
+				<a rel="noreferrer" target="_blank" href={source}>
 					<Button component="p">View Source Code</Button>
 				</a>
 			</CardActions>

@@ -9,10 +9,10 @@ const ProjectsStyles = makeStyles((theme) => ({
 		color: theme.palette.secondary.dark
 	},
 	align: {
-		height: "76.5vh",
+		height: "75vh",
 		display: "flex",
 		alignItems: "center",
-		justifyContent: "center"
+		justifyContent: "center",
 	}
 }))
 

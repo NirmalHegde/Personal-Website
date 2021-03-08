@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/styles';
 
 const ProjectsCardStyles = makeStyles((theme) => ({
 	root: {
-		maxWidth: 300
+		width: 275
 	}
 }))
 

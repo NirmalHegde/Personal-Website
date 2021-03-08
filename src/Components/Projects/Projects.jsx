@@ -5,6 +5,7 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 import ProjectsStyles from './ProjectsStyles'
 import ProjectsCard from './ProjectsCard/ProjectsCards'
+import { cardContents, firstSectionCards, secondSectionCards, thirdSectionCards } from './cardContents'
 
 const Projects = () => {
 	const classes = ProjectsStyles();
@@ -16,7 +17,7 @@ const Projects = () => {
 	const [state, setState] = React.useState(0);
 	const [grow, setGrow] = React.useState(true);
 	const changeStateLeft = (event, newValue) => {
-		const negativeChange = (((state - 1) % 2) + 2) % 2;
+		const negativeChange = (((state - 1) % firstSectionCards.length) + firstSectionCards.length) % firstSectionCards.length;
 		setGrow(false);
 		setTimeout(() => {
 			setState(negativeChange);
@@ -31,7 +32,7 @@ const Projects = () => {
 		}, 500);
 	}
 	const changeStateLeftOne = (event, newValue) => {
-		const negativeChange = (((state - 1) % 6) + 6) % 6;
+		const negativeChange = (((state - 1) % cardContents.length) + cardContents.length) % cardContents.length;
 		setGrow(false);
 		setTimeout(() => {
 			setState(negativeChange);
@@ -68,60 +69,48 @@ const Projects = () => {
 					<Grow in={grow}>
 						<Grid item xs={4}>
 							<div className={classes.align}>
-								{state === 0 &&
-									<ProjectsCard
-										demoTitle={"ASL Detector"}
-										demoDetails={"Trained a model to be able to identify the American Sign Language letters."}
-										gitHub={"https://github.com/anjalig21/Sign-Language-Detection"}
-									/>
-								}
-								{state === 1 &&
-									<ProjectsCard
-										demoTitle={"Webcam Painter"}
-										demoDetails={"An application that allows users to draw infront a webcam while they wave certain colour objects."}
-										gitHub={"https://github.com/anjalig21/Webcam-Painter"}
-									/>
-								}
+							{firstSectionCards.map((firstSectionCard, index) => {
+									return (
+										state === index &&
+										<ProjectsCard
+											key={firstSectionCard.title}
+											demoTitle={firstSectionCard.title}
+											demoDetails={firstSectionCard.details}
+										/>
+									);
+								})}
 							</div>
 						</Grid>
 					</Grow>
 					<Grow in={grow}>
 						<Grid item xs={4}>
 							<div className={classes.align}>
-								{state === 0 &&
-									<ProjectsCard
-										demoTitle={"ASL Detector"}
-										demoDetails={"Trained a model to be able to identify the American Sign Language letters."}
-										gitHub={"https://github.com/anjalig21/Sign-Language-Detection"}
-									/>
-								}
-								{state === 1 &&
-									<ProjectsCard
-										demoTitle={"Webcam Painter"}
-										demoDetails={"An application that allows users to draw infront a webcam while they wave certain colour objects."}
-										gitHub={"https://github.com/anjalig21/Webcam-Painter"}
-									/>
-								}
+							{secondSectionCards.map((secondSectionCard, index) => {
+									return (
+										state === index &&
+										<ProjectsCard
+											key={secondSectionCard.title}
+											demoTitle={secondSectionCard.title}
+											demoDetails={secondSectionCard.details}
+										/>
+									);
+								})}
 							</div>
 						</Grid>
 					</Grow>
 					<Grow in={grow}>
 						<Grid item xs={4}>
 							<div className={classes.align}>
-								{state === 0 &&
-									<ProjectsCard
-										demoTitle={"ASL Detector"}
-										demoDetails={"Trained a model to be able to identify the American Sign Language letters."}
-										gitHub={"https://github.com/anjalig21/Sign-Language-Detection"}
-									/>
-								}
-								{state === 1 &&
-									<ProjectsCard
-										demoTitle={"Webcam Painter"}
-										demoDetails={"An application that allows users to draw infront a webcam while they wave certain colour objects."}
-										gitHub={"https://github.com/anjalig21/Webcam-Painter"}
-									/>
-								}
+								{thirdSectionCards.map((thirdSectionCard, index) => {
+									return (
+										state === index &&
+										<ProjectsCard
+											key={thirdSectionCard.title}
+											demoTitle={thirdSectionCard.title}
+											demoDetails={thirdSectionCard.details}
+										/>
+									);
+								})}
 							</div>
 						</Grid>
 					</Grow>
@@ -146,48 +135,16 @@ const Projects = () => {
 				<Grid item xs={8}>
 					<Grow in={grow}>
 						<div className={classes.align}>
-							{state === 0 &&
-								<ProjectsCard
-									demoTitle={"ASL Detector"}
-									demoDetails={"Trained a model to be able to identify the American Sign Language letters."}
-									gitHub={"https://github.com/anjalig21/Sign-Language-Detection"}
-								/>
-							}
-							{state === 1 &&
-								<ProjectsCard
-									demoTitle={"Webcam Painter"}
-									demoDetails={"An application that allows users to draw infront a webcam while they wave certain colour objects."}
-									gitHub={"https://github.com/anjalig21/Webcam-Painter"}
-								/>
-							}
-							{state === 2 &&
-								<ProjectsCard
-									demoTitle={"Photo Bot"}
-									demoDetails={"A multi-purpose Discord Bot curated towards gaming communities."}
-									gitHub={"https://github.com/anjalig21/Photo-Bot"}
-								/>
-							}
-							{state === 3 &&
-								<ProjectsCard
-									demoTitle={"Webcam Painter"}
-									demoDetails={"An application that allows users to draw infront a webcam while they wave certain colour objects."}
-									gitHub={"https://github.com/anjalig21/Webcam-Painter"}
-								/>
-							}
-							{state === 4 &&
-								<ProjectsCard
-									demoTitle={"Climate Bots"}
-									demoDetails={"A social networking platform for individuals to discuss climate change."}
-									gitHub={"https://github.com/anjalig21/Climate-Bots"}
-								/>
-							}
-							{state === 5 &&
-								<ProjectsCard
-									demoTitle={"Shape Detection"}
-									demoDetails={"Developed an application that can detect and identify shapes from an image."}
-									gitHub={"https://github.com/anjalig21/Shape-Detection"}
-								/>
-							}
+						{cardContents.map((cardContent, index) => {
+									return (
+										state === index &&
+										<ProjectsCard
+											key={cardContent.title}
+											demoTitle={cardContent.title}
+											demoDetails={cardContent.details}
+										/>
+									);
+								})}
 						</div>
 					</Grow>
 				</Grid>
