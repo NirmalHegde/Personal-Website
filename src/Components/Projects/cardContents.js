@@ -47,7 +47,7 @@ for (let i = 0; i < cardContents.length; i++) {
 	secondSectionInit.push(cardContents[i * cardNumber + 1]);
 	thirdSectionInit.push(cardContents[i * cardNumber + 2]);
 
-	if (i * cardNumber + 2 === cardContents.length) {
+	if (i * cardNumber + 3 === cardContents.length) {
 		break;
 	}
 }

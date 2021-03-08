@@ -17,7 +17,7 @@ const Projects = () => {
 	const [state, setState] = React.useState(0);
 	const [grow, setGrow] = React.useState(true);
 	const changeStateLeft = (event, newValue) => {
-		const negativeChange = (((state - 1) % firstSectionCards.length) + firstSectionCards.length) % firstSectionCards.length;
+		const negativeChange = (((state - 1) % firstSectionCards.length) + firstSectionCards.length) % firstSectionCards;
 		setGrow(false);
 		setTimeout(() => {
 			setState(negativeChange);
@@ -27,12 +27,12 @@ const Projects = () => {
 	const changeStateRight = (event, newValue) => {
 		setGrow(false);
 		setTimeout(() => {
-			setState((state + 1) % 2);
+			setState((state + 1) % firstSectionCards.length);
 			setGrow(true);
 		}, 500);
 	}
 	const changeStateLeftOne = (event, newValue) => {
-		const negativeChange = (((state - 1) % cardContents.length) + cardContents.length) % cardContents.length;
+		const negativeChange = (((state + 1) % 6) + 6) % 6;
 		setGrow(false);
 		setTimeout(() => {
 			setState(negativeChange);
