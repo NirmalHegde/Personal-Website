@@ -10,7 +10,7 @@ export const cardContents = [
 		title: "Purple Purlers",
 		details: `Charity that collects blankets from the community to donate to animal shelters accross the GTA.
 							To date, 1200+ blankets and over $6000 have been raised.`,
-		source: "https://sites.google.com/view/purple-purlers"
+		website: "https://sites.google.com/view/purple-purlers"
 	},
 	{
 		header: leagueStatsBot,
@@ -24,14 +24,16 @@ export const cardContents = [
 		title: "Virtual Wonders",
 		details: `Hackathon project created for HackAttack. It is a web app that lets users to travel
 							the globe and explore different cultures during COVID-19.`,
-		source: "https://nirmalhegde.github.io/Virtual-Wonders/"
+		source: "https://github.com/NirmalHegde/Virtual-Wonders",
+		website: "https://nirmalhegde.github.io/Virtual-Wonders/"
 	},
 	{
 		header: nodeInfluencers,
 		title: "Node Influencers",
 		details: `Web app created for Node App coding challenge. Node is an application
 							that allows for influencers to connect with businesses for marketing reasons.`,
-		source: "https://github.com/NirmalHegde/Tuq-Tac-Toe"
+		source: "https://github.com/NirmalHegde/Node-Influencers",
+		website: "https://node-influencers.web.app/"
 	},
 	{
 		header: tuqTacToe,

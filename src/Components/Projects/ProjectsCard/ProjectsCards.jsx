@@ -27,13 +27,17 @@ const ProjectsCards = (props) => {
 				<div className={classes.linkContainer}>
 					<div className={classes.linkSpacing}>
 						{source && <>
-							<Typography className={classes.link} display="inline">See Source Code</Typography>
+							<a rel="noreferrer" target="_blank" href={source} style={{textDecoration: "none"}}>
+								<Typography className={classes.linkText} display="inline">See Source Code&nbsp;</Typography>
+							</a>
 						</>}
 						{(source && website) && <>
-							<Typography className={classes.link} display="inline">&nbsp;|&nbsp;</Typography>
+							<Typography style={{ fontSize: "0.85rem" }} display="inline">|&nbsp;</Typography>
 						</>}
 						{website && <>
-							<Typography className={classes.link} display="inline">See Live Website</Typography>
+							<a rel="noreferrer" target="_blank" href={website} style={{textDecoration: "none"}}>
+								<Typography className={classes.linkText} display="inline">See Live Website&nbsp;</Typography>
+							</a>
 						</>}
 					</div>
 				</div>

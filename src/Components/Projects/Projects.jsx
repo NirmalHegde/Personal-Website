@@ -83,7 +83,7 @@ const Projects = () => {
 											title={firstSectionCard.title}
 											details={firstSectionCard.details}
 											source={firstSectionCard.source}
-											website={"firstSectionCard.website"}
+											website={firstSectionCard.website}
 										/>
 									);
 								})}
@@ -159,7 +159,7 @@ const Projects = () => {
 											title={firstSmallSectionCard.title}
 											details={firstSmallSectionCard.details}
 											source={firstSmallSectionCard.source}
-											website={"firstSectionCard.website"}
+											website={firstSmallSectionCard.website}
 										/>
 									);
 								})}
