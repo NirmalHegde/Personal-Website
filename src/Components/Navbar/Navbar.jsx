@@ -1,12 +1,13 @@
 //React/Material UI Libraries
 import React from 'react';
-import { useMediaQuery, AppBar, Toolbar, Typography, Tab, Tabs, IconButton, Drawer } from '@material-ui/core';
+import { useMediaQuery, AppBar, Toolbar, Tab, Tabs, IconButton, Drawer } from '@material-ui/core';
 import { Link } from 'react-scroll'
 import MenuIcon from '@material-ui/icons/Menu';
 
 
 //File Imports
 import NavbarStyles from "./NavbarStyles";
+import logo from "./NirmalLogo.png"
 
 //header section of website
 const Navbar = () => {
@@ -56,7 +57,7 @@ const Navbar = () => {
                     {/* Initials */}
                     <div style={{ marginRight: "1%" }} />
                     <Link smooth="true" duration={1000} to="home">
-                        <Typography className={classes.initials} display="inline"><b>NH.</b></Typography>
+                        <img alt="logo" className={classes.logo} src={logo}></img>
                     </Link>
                     <div className={classes.space} />
 

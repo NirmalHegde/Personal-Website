@@ -15,6 +15,7 @@ const Contact = () => {
 	// classes and queries
 	const classes = ContactStyles();
 	const md = useMediaQuery('(max-width: 960px)');
+	const lg = useMediaQuery('(min-width: 960px)');
 
 	// state declaration
 	const [name, setName] = React.useState("");
@@ -90,7 +91,8 @@ const Contact = () => {
 			</Grid>
 
 			{/* Contact Text */}
-			<Grid item xs={1}></Grid>
+			{lg && <>
+				<Grid item xs={1}></Grid>
 			<Grid item xs={10} md={5}>
 				<br /><br />
 				<Typography variant="h5"><b>Get in Touch!</b></Typography>
@@ -122,6 +124,7 @@ const Contact = () => {
 				<br /><br /><br />
 			</Grid>
 			<Grid item xs={1}></Grid>
+			</>}
 
 			{/* Contact Form */}
 			{md && <Grid item xs={1}></Grid>}

@@ -11,15 +11,16 @@ const NavbarStyles = makeStyles((theme) => ({
         paddingTop: "1%",
         background: "transparent",
     },
-    initials: {
-        fontFamily: "Poppins",
-        color: "#ffffff",
-        fontSize: "300%",
-        fontWeight: "400",
+    logo: {
+        transition: "0.3s",
+        paddingTop: "1%",
+        paddingBottom: "1%",
+        width: "9.5%",
+        height: "auto",
         cursor: "pointer",
-        '&:hover': {
-            transition: "0.5s",
-            color: "#b5befa"
+        "&:hover": {
+            transition: "0.3s",
+            width: "11%"
         }
     },
     space: {

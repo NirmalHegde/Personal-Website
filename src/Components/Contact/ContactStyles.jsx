@@ -6,12 +6,12 @@ const ContactStyles = makeStyles((theme) => ({
 		color: theme.palette.secondary.dark
 	},
 	formContainer: {
-		height: "70vh",
+		height: "78vh",
 		position: "relative"
 	},
 	form: {
 		position: "absolute",
-		top: "48%",
+		top: "50%",
 		left: "50%",
 		transform: "translate(-100%, -50%)"
 	},
