@@ -2,7 +2,13 @@ import { makeStyles } from '@material-ui/styles';
 
 const ProjectsCardStyles = makeStyles((theme) => ({
 	root: {
-		width: 300
+		width: 300,
+		color: "#000000",
+		"&:hover": {
+			transition: "0.3s",
+			backgroundColor: theme.palette.secondary.dark,
+			color: "white"
+		}
 	},
 	linkContainer: {
 		display: "flex",
@@ -11,11 +17,22 @@ const ProjectsCardStyles = makeStyles((theme) => ({
 	},
 	linkSpacing: {
 		display: "inline-block",
-		textAlign: "center"
+		textAlign: "center",
 	},
-	linkText: {
+	linkTextBlack: {
+		transition: "0.3s",
 		fontSize: "0.85rem",
 		color: "#000000",
+		"&:hover": {
+			transition: "0.3s",
+			color: "#b5befa",
+			fontSize: "1rem",
+		}
+	},
+	linkTextWhite: {
+		transition: "0.3s",
+		fontSize: "0.85rem",
+		color: "#ffffff",
 		"&:hover": {
 			transition: "0.3s",
 			color: "#b5befa",

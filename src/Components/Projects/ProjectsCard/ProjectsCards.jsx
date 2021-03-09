@@ -7,8 +7,18 @@ const ProjectsCards = (props) => {
 
 	const classes = ProjectsCardStyles()
 
+	const [link, setLink] = React.useState('linkTextBlack')
+
+	const handleHover = (hover) => {
+		if (hover) {
+			setLink('linkTextWhite');
+		} else {
+			setLink('linkTextBlack');
+		}
+	}
+
 	return (
-		<Card className={classes.root}>
+		<Card onMouseEnter={() => handleHover(true)} onMouseLeave={() => handleHover(false)} className={classes.root}>
 			<CardMedia
 				component="img"
 				alt="Image"
@@ -28,7 +38,7 @@ const ProjectsCards = (props) => {
 					<div className={classes.linkSpacing}>
 						{source && <>
 							<a rel="noreferrer" target="_blank" href={source} style={{textDecoration: "none"}}>
-								<Typography className={classes.linkText} display="inline">See Source Code&nbsp;</Typography>
+								<Typography className={classes[link]} display="inline">See Source Code&nbsp;</Typography>
 							</a>
 						</>}
 						{(source && website) && <>
@@ -36,7 +46,7 @@ const ProjectsCards = (props) => {
 						</>}
 						{website && <>
 							<a rel="noreferrer" target="_blank" href={website} style={{textDecoration: "none"}}>
-								<Typography className={classes.linkText} display="inline">See Live Website&nbsp;</Typography>
+								<Typography className={classes[link]} display="inline">See Live Website&nbsp;</Typography>
 							</a>
 						</>}
 					</div>
