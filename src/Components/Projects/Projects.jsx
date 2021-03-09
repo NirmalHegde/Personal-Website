@@ -5,45 +5,49 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 import ProjectsStyles from './ProjectsStyles'
 import ProjectsCard from './ProjectsCard/ProjectsCards'
-import { cardContents, firstSectionCards, secondSectionCards, thirdSectionCards } from './cardContents'
+import { cardContents, firstSectionCards, secondSectionCards, thirdSectionCards, firstSmallSectionCards, secondSmallSectionCards } from './cardContents'
 
 const Projects = () => {
 	const classes = ProjectsStyles();
 
-	const lg = useMediaQuery('(min-width: 1100px)');
-	const md = useMediaQuery('(max-width: 1100px)');
-	const sm = useMediaQuery('(min-width: 600px)');
+	const lg = useMediaQuery('(min-width: 1280px)');
+	const md = useMediaQuery('(max-width: 1280px)');
+	const sm = useMediaQuery('(min-width: 870px)');
+	const sm2 = useMediaQuery('(min-width: 600px)');
+	const xs = useMediaQuery('(max-width: 870px)');
 
 	const [state, setState] = React.useState(0);
 	const [grow, setGrow] = React.useState(true);
-	const changeStateLeft = (event, newValue) => {
-		const negativeChange = (((state - 1) % firstSectionCards.length) + firstSectionCards.length) % firstSectionCards.length;
+
+	const changeStateLeft = (cards) => {
+		let divisor;
+		if (cards === 3) {
+			divisor = firstSectionCards.length;
+		} else if (cards === 2) {
+			divisor = firstSmallSectionCards.length;
+		} else {
+			divisor = cardContents.length
+		}
+		const negativeChange = (((state - 1) % divisor) + divisor) % divisor;
 		setGrow(false);
 		setTimeout(() => {
 			setState(negativeChange);
 			setGrow(true);
 		}, 500);
 	}
-	const changeStateRight = (event, newValue) => {
+
+	const changeStateRight = (cards) => {
+		let divisor;
+		if (cards === 3) {
+			divisor = firstSectionCards.length;
+		} else if (cards === 2) {
+			divisor = firstSmallSectionCards.length;
+		} else {
+			divisor = cardContents.length
+		}
 		setGrow(false);
 		setTimeout(() => {
-			setState((state + 1) % firstSectionCards.length);
-			console.log(state);
-			setGrow(true);
-		}, 500);
-	}
-	const changeStateLeftOne = (event, newValue) => {
-		const negativeChange = (((state - 1) % cardContents.length) + cardContents.length) % cardContents.length;
-		setGrow(false);
-		setTimeout(() => {
-			setState(negativeChange);
-			setGrow(true);
-		}, 500);
-	}
-	const changeStateRightOne = (event, newValue) => {
-		setGrow(false);
-		setTimeout(() => {
-			setState((state + 1) % cardContents.length);
+			setState((state + 1) % divisor);
 			setGrow(true);
 		}, 500);
 	}
@@ -56,12 +60,12 @@ const Projects = () => {
 				<Typography variant="h4">~ What have I been working on? ~</Typography>
 			</Grid>
 
-			{sm && <Grid item xs={1}></Grid>}
+			{sm2 && <Grid item xs={1}></Grid>}
 
 			{lg && <>
 				<Grid item xs={1}>
 					<div className={classes.align}>
-						<IconButton onClick={changeStateLeft} aria-label="arrow-left">
+						<IconButton onClick={() => changeStateLeft(3)} aria-label="arrow-left">
 							<ArrowBackIcon />
 						</IconButton>
 					</div>
@@ -70,7 +74,7 @@ const Projects = () => {
 					<Grow in={grow}>
 						<Grid item xs={4}>
 							<div className={classes.align}>
-							{firstSectionCards.map((firstSectionCard, index) => {
+								{firstSectionCards.map((firstSectionCard, index) => {
 									return (
 										state === index &&
 										<ProjectsCard
@@ -79,6 +83,7 @@ const Projects = () => {
 											title={firstSectionCard.title}
 											details={firstSectionCard.details}
 											source={firstSectionCard.source}
+											website={"firstSectionCard.website"}
 										/>
 									);
 								})}
@@ -88,7 +93,7 @@ const Projects = () => {
 					<Grow in={grow}>
 						<Grid item xs={4}>
 							<div className={classes.align}>
-							{secondSectionCards.map((secondSectionCard, index) => {
+								{secondSectionCards.map((secondSectionCard, index) => {
 									return (
 										state === index &&
 										<ProjectsCard
@@ -97,6 +102,7 @@ const Projects = () => {
 											title={secondSectionCard.title}
 											details={secondSectionCard.details}
 											source={secondSectionCard.source}
+											website={secondSectionCard.website}
 										/>
 									);
 								})}
@@ -115,6 +121,7 @@ const Projects = () => {
 											title={thirdSectionCard.title}
 											details={thirdSectionCard.details}
 											source={thirdSectionCard.source}
+											website={thirdSectionCard.website}
 										/>
 									);
 								})}
@@ -124,17 +131,74 @@ const Projects = () => {
 				</Grid>
 				<Grid item xs={1}>
 					<div className={classes.align}>
-						<IconButton onClick={changeStateRight} aria-label="arrow-right">
+						<IconButton onClick={() => changeStateRight(3)} aria-label="arrow-right">
 							<ArrowForwardIcon />
 						</IconButton>
 					</div>
 				</Grid>
 			</>}
 
-			{md && <>
+			{md && sm && <>
+				<Grid item xs={1}>
+					<div className={classes.align}>
+						<IconButton onClick={() => changeStateLeft(2)} aria-label="arrow-left">
+							<ArrowBackIcon />
+						</IconButton>
+					</div>
+				</Grid>
+				<Grid item container spacing={1} xs={8}>
+					<Grow in={grow}>
+						<Grid item xs={6}>
+							<div className={classes.align}>
+								{firstSmallSectionCards.map((firstSmallSectionCard, index) => {
+									return (
+										state === index &&
+										<ProjectsCard
+											key={firstSmallSectionCard.title}
+											header={firstSmallSectionCard.header}
+											title={firstSmallSectionCard.title}
+											details={firstSmallSectionCard.details}
+											source={firstSmallSectionCard.source}
+											website={"firstSectionCard.website"}
+										/>
+									);
+								})}
+							</div>
+						</Grid>
+					</Grow>
+					<Grow in={grow}>
+						<Grid item xs={6}>
+							<div className={classes.align}>
+								{secondSmallSectionCards.map((secondSmallSectionCard, index) => {
+									return (
+										state === index &&
+										<ProjectsCard
+											key={secondSmallSectionCard.title}
+											header={secondSmallSectionCard.header}
+											title={secondSmallSectionCard.title}
+											details={secondSmallSectionCard.details}
+											source={secondSmallSectionCard.source}
+											website={secondSmallSectionCard.website}
+										/>
+									);
+								})}
+							</div>
+						</Grid>
+					</Grow>
+				</Grid>
+				<Grid item xs={1}>
+					<div className={classes.align}>
+						<IconButton onClick={() => changeStateRight(2)} aria-label="arrow-right">
+							<ArrowForwardIcon />
+						</IconButton>
+					</div>
+				</Grid>
+			</>}
+
+			{xs && <>
 				<Grid item xs={2} sm={1}>
 					<div className={classes.align}>
-						<IconButton onClick={changeStateLeftOne} aria-label="arrow-left">
+						<IconButton onClick={() => changeStateLeft(1)} aria-label="arrow-left">
 							<ArrowBackIcon />
 						</IconButton>
 					</div>
@@ -142,24 +206,25 @@ const Projects = () => {
 				<Grid item xs={8}>
 					<Grow in={grow}>
 						<div className={classes.align}>
-						{cardContents.map((cardContent, index) => {
-									return (
-										state === index &&
-										<ProjectsCard
-											key={cardContent.title}
-											header={cardContent.header}
-											title={cardContent.title}
-											details={cardContent.details}
-											source={cardContent.source}
-										/>
-									);
-								})}
+							{cardContents.map((cardContent, index) => {
+								return (
+									state === index &&
+									<ProjectsCard
+										key={cardContent.title}
+										header={cardContent.header}
+										title={cardContent.title}
+										details={cardContent.details}
+										source={cardContent.source}
+										website={cardContent.website}
+									/>
+								);
+							})}
 						</div>
 					</Grow>
 				</Grid>
 				<Grid item xs={2} sm={1}>
 					<div className={classes.align}>
-						<IconButton onClick={changeStateRightOne} aria-label="arrow-right">
+						<IconButton onClick={() => changeStateRight(1)} aria-label="arrow-right">
 							<ArrowForwardIcon />
 						</IconButton>
 					</div>

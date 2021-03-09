@@ -50,9 +50,12 @@ export const cardContents = [
 
 // init for populating split arrays
 const cardNumber = 3;
+const cardNumberSmall = 2;
 let firstSectionInit = [];
 let secondSectionInit = [];
 let thirdSectionInit = [];
+let firstSmallSectionInit = [];
+let secondSmallSectionInit = [];
 
 // populate arrays for each section
 for (let i = 0; i < cardContents.length; i++) {
@@ -60,7 +63,15 @@ for (let i = 0; i < cardContents.length; i++) {
 	secondSectionInit.push(cardContents[i * cardNumber + 1]);
 	thirdSectionInit.push(cardContents[i * cardNumber + 2]);
 
-	if (i * cardNumber + 3 >= cardContents.length) {
+	if (i * cardNumber + cardNumber >= cardContents.length) {
+		break;
+	}
+}
+for (let i = 0; i < cardContents.length; i++) {
+	firstSmallSectionInit.push(cardContents[i * cardNumberSmall]);
+	secondSmallSectionInit.push(cardContents[i * cardNumberSmall + 1]);
+
+	if (i * cardNumberSmall + cardNumberSmall >= cardContents.length) {
 		break;
 	}
 }
@@ -69,3 +80,5 @@ for (let i = 0; i < cardContents.length; i++) {
 export const firstSectionCards = firstSectionInit;
 export const secondSectionCards = secondSectionInit;
 export const thirdSectionCards = thirdSectionInit;
+export const firstSmallSectionCards = firstSmallSectionInit;
+export const secondSmallSectionCards = secondSmallSectionInit;

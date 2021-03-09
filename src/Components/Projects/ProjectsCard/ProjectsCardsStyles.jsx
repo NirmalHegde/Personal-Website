@@ -2,7 +2,19 @@ import { makeStyles } from '@material-ui/styles';
 
 const ProjectsCardStyles = makeStyles((theme) => ({
 	root: {
-		width: 275
+		width: 300
+	},
+	linkContainer: {
+		display: "flex",
+		justifyContent: "center",
+		alignItems: "center"
+	},
+	linkSpacing: {
+		display: "inline-block",
+		textAlign: "center"
+	},
+	link: {
+		fontSize: "0.85rem"
 	}
 }))
 
