@@ -230,7 +230,6 @@ const Projects = () => {
 					</div>
 				</Grid>
 			</>}
-
 		</Grid>
 	)
 }

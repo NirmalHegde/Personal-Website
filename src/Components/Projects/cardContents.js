@@ -16,14 +16,14 @@ export const cardContents = [
 		header: leagueStatsBot,
 		title: "League Stats Bot",
 		details: `Discord bot which allows users to search up their League of Legends stats during discussions.
-							Used by over 100 people on multiple servers.`,
+							Used by over 100 people on multiple servers. Developed using Node.js`,
 		source: "https://github.com/NirmalHegde/League-Stats-Bot"
 	},
 	{
 		header: virtualWonders,
 		title: "Virtual Wonders",
 		details: `Hackathon project created for HackAttack. It is a web app that lets users to travel
-							the globe and explore different cultures during COVID-19.`,
+							the globe and explore different cultures during COVID-19. Developed using HTML, CSS, and JS.`,
 		source: "https://github.com/NirmalHegde/Virtual-Wonders",
 		website: "https://nirmalhegde.github.io/Virtual-Wonders/"
 	},
@@ -38,14 +38,15 @@ export const cardContents = [
 	{
 		header: tuqTacToe,
 		title: "Tuq Tac Toe",
-		details: `Tic tac toe game created for the Tuq coding challenge.`,
+		details: `Tic tac toe application created for the Tuq coding challenge. UI was developed using Tkinter and PyGame and all logic
+							was completed using Python.`,
 		source: "https://github.com/NirmalHegde/Tuq-Tac-Toe"
 	},
 	{
 		header: intersectionSimulation,
-		title: "Arduino Intersection",
+		title: "Intersection Simulation",
 		details: `Built a prototype version of a new intersection. Used light sensors to detect traffic while also implementing
-							a sound system for police cars.`,
+							a sound system for police cars. Developed using C++ and Arduino.`,
 		source: "https://github.com/NirmalHegde/Intersection-Simulation"
 	},
 ];

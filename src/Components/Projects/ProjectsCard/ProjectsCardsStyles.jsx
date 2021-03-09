@@ -2,8 +2,7 @@ import { makeStyles } from '@material-ui/styles';
 
 const ProjectsCardStyles = makeStyles((theme) => ({
 	root: {
-		width: 300,
-		height: 410
+		width: 300
 	},
 	linkContainer: {
 		display: "flex",

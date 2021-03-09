@@ -12,7 +12,7 @@ const ProjectsCards = (props) => {
 			<CardMedia
 				component="img"
 				alt="Image"
-				height="190"
+				height="210"
 				image={header}
 				title="Image"
 			/>
