@@ -3,10 +3,11 @@ import tuqTacToe from './Images/tuqTacToe.gif'
 import nodeInfluencers from './Images/nodeInfluencers.gif'
 import leagueStatsBot from './Images/leagueStatsBot.gif'
 import intersectionSimulation from './Images/intersection.gif'
+import purplePurlers from './Images/purplePurlers.gif'
 
 export const cardContents = [
 	{
-		header: nodeInfluencers,
+		header: purplePurlers,
 		title: "Purple Purlers",
 		details: `Charity that collects blankets from the community to donate to animal shelters accross the GTA.
 							To date, 1200+ blankets and over $6000 have been raised.`,
