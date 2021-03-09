@@ -1,41 +1,49 @@
+import virtualWonders from './Images/virtualWonders.gif'
+import tuqTacToe from './Images/tuqTacToe.gif'
+import nodeInfluencers from './Images/nodeInfluencers.gif'
+import leagueStatsBot from './Images/leagueStatsBot.gif'
+import intersectionSimulation from './Images/intersection.gif'
+
 export const cardContents = [
 	{
-		header: "",
-		title: "title1",
-		details: "description1",
+		header: virtualWonders,
+		title: "Virtual Wonders",
+		details: `Web app that lets users to travel the globe and explore different cultures in COVID-19.`,
 		source: "https://nirmalhegde.github.io/Virtual-Wonders/"
 	},
 	{
-		title: "title2",
-		details: "description2"
+		header: tuqTacToe,
+		title: "Tuq Tac Toe",
+		details: `Tic tac toe game created for the Tuq coding challenge.`,
+		source: "https://github.com/NirmalHegde/Tuq-Tac-Toe"
 	},
 	{
-		title: "title3",
-		details: "description3"
+		header: nodeInfluencers,
+		title: "Node Influencers",
+		details: `Web app created for Node App coding challenge. Node is an application
+							that allows for influencers to connect with businesses for marketing reasons.`,
+		source: "https://github.com/NirmalHegde/Tuq-Tac-Toe"
 	},
 	{
-		title: "title4",
-		details: "description4"
+		header: nodeInfluencers,
+		title: "Purple Purlers",
+		details: `Charity that collects blankets from the community to donate to animal shelters accross the GTA.
+							To date, 1200+ blankets and over $6000 have been raised.`,
+		source: "https://sites.google.com/view/purple-purlers"
 	},
 	{
-		title: "title5",
-		details: "description5"
+		header: leagueStatsBot,
+		title: "League Stats Bot",
+		details: `Discord bot which allows users to search up their League of Legends stats during discussions.
+							Used by over 100 people on multiple servers.`,
+		source: "https://github.com/NirmalHegde/League-Stats-Bot"
 	},
 	{
-		title: "title6",
-		details: "description6"
-	},
-	{
-		title: "title7",
-		details: "description7"
-	},
-	{
-		title: "title8",
-		details: "description8"
-	},
-	{
-		title: "title9",
-		details: "description9"
+		header: intersectionSimulation,
+		title: "Arduino Intersection",
+		details: `Built a prototype version of a new intersection. Used light sensors to detect traffic while also implementing
+							a sound system for police cars.`,
+		source: "https://github.com/NirmalHegde/Intersection-Simulation"
 	},
 ];
 

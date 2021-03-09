@@ -3,7 +3,7 @@ import { Card, CardActionArea, CardContent, CardMedia, CardActions, Typography, 
 import ProjectsCardStyles from './ProjectsCardsStyles'
 
 const ProjectsCards = (props) => {
-	const { demo, demoTitle, demoDetails, source } = props;
+	const { header, title, details, source } = props;
 
 	const classes = ProjectsCardStyles()
 
@@ -14,15 +14,15 @@ const ProjectsCards = (props) => {
 					component="img"
 					alt="Image"
 					height="190"
-					image={demo}
+					image={header}
 					title="Image"
 				/>
 				<CardContent>
 					<Typography variant="h4">
-						{demoTitle}
+						<b>{title}</b><br/><br/>
 					</Typography>
 					<Typography variant="body2" component="p">
-						{demoDetails}
+						{details}
 					</Typography>
 				</CardContent>
 			</CardActionArea>

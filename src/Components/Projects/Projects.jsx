@@ -17,7 +17,7 @@ const Projects = () => {
 	const [state, setState] = React.useState(0);
 	const [grow, setGrow] = React.useState(true);
 	const changeStateLeft = (event, newValue) => {
-		const negativeChange = (((state - 1) % firstSectionCards.length) + firstSectionCards.length) % firstSectionCards;
+		const negativeChange = (((state - 1) % firstSectionCards.length) + firstSectionCards.length) % firstSectionCards.length;
 		setGrow(false);
 		setTimeout(() => {
 			setState(negativeChange);
@@ -28,11 +28,12 @@ const Projects = () => {
 		setGrow(false);
 		setTimeout(() => {
 			setState((state + 1) % firstSectionCards.length);
+			console.log(state);
 			setGrow(true);
 		}, 500);
 	}
 	const changeStateLeftOne = (event, newValue) => {
-		const negativeChange = (((state + 1) % 6) + 6) % 6;
+		const negativeChange = (((state - 1) % cardContents.length) + cardContents.length) % cardContents.length;
 		setGrow(false);
 		setTimeout(() => {
 			setState(negativeChange);
@@ -42,7 +43,7 @@ const Projects = () => {
 	const changeStateRightOne = (event, newValue) => {
 		setGrow(false);
 		setTimeout(() => {
-			setState((state + 1) % 6);
+			setState((state + 1) % cardContents.length);
 			setGrow(true);
 		}, 500);
 	}
@@ -74,8 +75,10 @@ const Projects = () => {
 										state === index &&
 										<ProjectsCard
 											key={firstSectionCard.title}
-											demoTitle={firstSectionCard.title}
-											demoDetails={firstSectionCard.details}
+											header={firstSectionCard.header}
+											title={firstSectionCard.title}
+											details={firstSectionCard.details}
+											source={firstSectionCard.source}
 										/>
 									);
 								})}
@@ -90,8 +93,10 @@ const Projects = () => {
 										state === index &&
 										<ProjectsCard
 											key={secondSectionCard.title}
-											demoTitle={secondSectionCard.title}
-											demoDetails={secondSectionCard.details}
+											header={secondSectionCard.header}
+											title={secondSectionCard.title}
+											details={secondSectionCard.details}
+											source={secondSectionCard.source}
 										/>
 									);
 								})}
@@ -106,8 +111,10 @@ const Projects = () => {
 										state === index &&
 										<ProjectsCard
 											key={thirdSectionCard.title}
-											demoTitle={thirdSectionCard.title}
-											demoDetails={thirdSectionCard.details}
+											header={thirdSectionCard.header}
+											title={thirdSectionCard.title}
+											details={thirdSectionCard.details}
+											source={thirdSectionCard.source}
 										/>
 									);
 								})}
@@ -140,8 +147,10 @@ const Projects = () => {
 										state === index &&
 										<ProjectsCard
 											key={cardContent.title}
-											demoTitle={cardContent.title}
-											demoDetails={cardContent.details}
+											header={cardContent.header}
+											title={cardContent.title}
+											details={cardContent.details}
+											source={cardContent.source}
 										/>
 									);
 								})}
