@@ -6,25 +6,6 @@ import intersectionSimulation from './Images/intersection.gif'
 
 export const cardContents = [
 	{
-		header: virtualWonders,
-		title: "Virtual Wonders",
-		details: `Web app that lets users to travel the globe and explore different cultures in COVID-19.`,
-		source: "https://nirmalhegde.github.io/Virtual-Wonders/"
-	},
-	{
-		header: tuqTacToe,
-		title: "Tuq Tac Toe",
-		details: `Tic tac toe game created for the Tuq coding challenge.`,
-		source: "https://github.com/NirmalHegde/Tuq-Tac-Toe"
-	},
-	{
-		header: nodeInfluencers,
-		title: "Node Influencers",
-		details: `Web app created for Node App coding challenge. Node is an application
-							that allows for influencers to connect with businesses for marketing reasons.`,
-		source: "https://github.com/NirmalHegde/Tuq-Tac-Toe"
-	},
-	{
 		header: nodeInfluencers,
 		title: "Purple Purlers",
 		details: `Charity that collects blankets from the community to donate to animal shelters accross the GTA.
@@ -37,6 +18,26 @@ export const cardContents = [
 		details: `Discord bot which allows users to search up their League of Legends stats during discussions.
 							Used by over 100 people on multiple servers.`,
 		source: "https://github.com/NirmalHegde/League-Stats-Bot"
+	},
+	{
+		header: virtualWonders,
+		title: "Virtual Wonders",
+		details: `Hackathon project created for HackAttack. It is a web app that lets users to travel
+							the globe and explore different cultures during COVID-19.`,
+		source: "https://nirmalhegde.github.io/Virtual-Wonders/"
+	},
+	{
+		header: nodeInfluencers,
+		title: "Node Influencers",
+		details: `Web app created for Node App coding challenge. Node is an application
+							that allows for influencers to connect with businesses for marketing reasons.`,
+		source: "https://github.com/NirmalHegde/Tuq-Tac-Toe"
+	},
+	{
+		header: tuqTacToe,
+		title: "Tuq Tac Toe",
+		details: `Tic tac toe game created for the Tuq coding challenge.`,
+		source: "https://github.com/NirmalHegde/Tuq-Tac-Toe"
 	},
 	{
 		header: intersectionSimulation,
