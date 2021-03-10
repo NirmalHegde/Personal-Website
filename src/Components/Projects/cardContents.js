@@ -23,7 +23,7 @@ export const cardContents = [
 	{
 		header: virtualWonders,
 		title: "Virtual Wonders",
-		details: `Hackathon project created for HackAttack. It is a web app that lets users to travel
+		details: `Hackathon project created for HackAttack. Website that lets users to travel
 							the globe and explore different cultures during COVID-19. Developed using HTML, CSS, and JS.`,
 		source: "https://github.com/NirmalHegde/Virtual-Wonders",
 		website: "https://nirmalhegde.github.io/Virtual-Wonders/"

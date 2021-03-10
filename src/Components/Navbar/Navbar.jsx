@@ -67,13 +67,13 @@ const Navbar = () => {
                             <Link smooth="true" duration={1000} to="home">
                                 <Tab className={classes.tabs} label="Home" />
                             </Link>
-                            <Link smooth="true" duration={1000} offset={-70} to="about">
+                            <Link smooth="true" duration={1000} offset={-80} to="about">
                                 <Tab className={classes.tabs} label="About" />
                             </Link>
-                            <Link smooth="true" duration={1000} offset={-70} to="projects">
+                            <Link smooth="true" duration={1000} offset={-80} to="projects">
                                 <Tab className={classes.tabs} label="Projects" />
                             </Link>
-                            <Link smooth="true" duration={1000} offset={-70} to="contact">
+                            <Link smooth="true" duration={1000} offset={-80} to="contact">
                                 <Tab className={classes.tabs} label="Contact" />
                             </Link>
                         </Tabs>

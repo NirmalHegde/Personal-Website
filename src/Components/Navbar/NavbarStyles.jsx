@@ -13,14 +13,14 @@ const NavbarStyles = makeStyles((theme) => ({
     },
     logo: {
         transition: "0.3s",
-        paddingTop: "1%",
-        paddingBottom: "1%",
-        width: "9.5%",
+        paddingTop: "1vh",
+        paddingBottom: "1vh",
+        width: "7.5vh",
         height: "auto",
         cursor: "pointer",
         "&:hover": {
             transition: "0.3s",
-            width: "11%"
+            width: "10vh"
         }
     },
     space: {

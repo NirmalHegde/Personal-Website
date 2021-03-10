@@ -26,7 +26,6 @@ const ProjectsCardStyles = makeStyles((theme) => ({
 		"&:hover": {
 			transition: "0.3s",
 			color: "#b5befa",
-			fontSize: "1rem",
 		}
 	},
 	linkTextWhite: {
@@ -36,7 +35,6 @@ const ProjectsCardStyles = makeStyles((theme) => ({
 		"&:hover": {
 			transition: "0.3s",
 			color: "#b5befa",
-			fontSize: "1rem",
 		}
 	}
 }))

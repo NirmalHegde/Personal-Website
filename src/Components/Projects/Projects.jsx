@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Typography, IconButton, useMediaQuery, Grow } from '@material-ui/core'
+import { Grid, Typography, IconButton, useMediaQuery, Zoom } from '@material-ui/core'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
@@ -11,13 +11,13 @@ const Projects = () => {
 	const classes = ProjectsStyles();
 
 	const lg = useMediaQuery('(min-width: 1280px)');
-	const md = useMediaQuery('(max-width: 1280px)');
+	const md = useMediaQuery('(max-width: 1279px)');
 	const sm = useMediaQuery('(min-width: 870px)');
 	const sm2 = useMediaQuery('(min-width: 600px)');
-	const xs = useMediaQuery('(max-width: 870px)');
+	const xs = useMediaQuery('(max-width: 869px)');
 
 	const [state, setState] = React.useState(0);
-	const [grow, setGrow] = React.useState(true);
+	const [zoom, setZoom] = React.useState(true);
 
 	const changeStateLeft = (cards) => {
 		let divisor;
@@ -29,10 +29,10 @@ const Projects = () => {
 			divisor = cardContents.length
 		}
 		const negativeChange = (((state - 1) % divisor) + divisor) % divisor;
-		setGrow(false);
+		setZoom(false);
 		setTimeout(() => {
 			setState(negativeChange);
-			setGrow(true);
+			setZoom(true);
 		}, 500);
 	}
 
@@ -45,10 +45,10 @@ const Projects = () => {
 		} else {
 			divisor = cardContents.length
 		}
-		setGrow(false);
+		setZoom(false);
 		setTimeout(() => {
 			setState((state + 1) % divisor);
-			setGrow(true);
+			setZoom(true);
 		}, 500);
 	}
 
@@ -71,7 +71,7 @@ const Projects = () => {
 					</div>
 				</Grid>
 				<Grid item container spacing={1} xs={8}>
-					<Grow in={grow}>
+					<Zoom in={zoom} style={{ transitionDelay: '0ms' }}>
 						<Grid item xs={4}>
 							<div className={classes.align}>
 								{firstSectionCards.map((firstSectionCard, index) => {
@@ -89,8 +89,8 @@ const Projects = () => {
 								})}
 							</div>
 						</Grid>
-					</Grow>
-					<Grow in={grow}>
+					</Zoom>
+					<Zoom in={zoom} style={{ transitionDelay: zoom ? '200ms' : '0ms' }}>
 						<Grid item xs={4}>
 							<div className={classes.align}>
 								{secondSectionCards.map((secondSectionCard, index) => {
@@ -108,8 +108,8 @@ const Projects = () => {
 								})}
 							</div>
 						</Grid>
-					</Grow>
-					<Grow in={grow}>
+					</Zoom>
+					<Zoom in={zoom} style={{ transitionDelay: zoom ? '400ms' : '0ms' }}>
 						<Grid item xs={4}>
 							<div className={classes.align}>
 								{thirdSectionCards.map((thirdSectionCard, index) => {
@@ -127,7 +127,7 @@ const Projects = () => {
 								})}
 							</div>
 						</Grid>
-					</Grow>
+					</Zoom>
 				</Grid>
 				<Grid item xs={1}>
 					<div className={classes.align}>
@@ -138,62 +138,63 @@ const Projects = () => {
 				</Grid>
 			</>}
 
-			{md && sm && <>
-				<Grid item xs={1}>
-					<div className={classes.align}>
-						<IconButton onClick={() => changeStateLeft(2)} aria-label="arrow-left">
-							<ArrowBackIcon />
-						</IconButton>
-					</div>
-				</Grid>
-				<Grid item container spacing={1} xs={8}>
-					<Grow in={grow}>
-						<Grid item xs={6}>
-							<div className={classes.align}>
-								{firstSmallSectionCards.map((firstSmallSectionCard, index) => {
-									return (
-										state === index &&
-										<ProjectsCard
-											key={firstSmallSectionCard.title}
-											header={firstSmallSectionCard.header}
-											title={firstSmallSectionCard.title}
-											details={firstSmallSectionCard.details}
-											source={firstSmallSectionCard.source}
-											website={firstSmallSectionCard.website}
-										/>
-									);
-								})}
-							</div>
-						</Grid>
-					</Grow>
-					<Grow in={grow}>
-						<Grid item xs={6}>
-							<div className={classes.align}>
-								{secondSmallSectionCards.map((secondSmallSectionCard, index) => {
-									return (
-										state === index &&
-										<ProjectsCard
-											key={secondSmallSectionCard.title}
-											header={secondSmallSectionCard.header}
-											title={secondSmallSectionCard.title}
-											details={secondSmallSectionCard.details}
-											source={secondSmallSectionCard.source}
-											website={secondSmallSectionCard.website}
-										/>
-									);
-								})}
-							</div>
-						</Grid>
-					</Grow>
-				</Grid>
-				<Grid item xs={1}>
-					<div className={classes.align}>
-						<IconButton onClick={() => changeStateRight(2)} aria-label="arrow-right">
-							<ArrowForwardIcon />
-						</IconButton>
-					</div>
-				</Grid>
-			</>}
+			{md &&
+				sm && <>
+					<Grid item xs={1}>
+						<div className={classes.align}>
+							<IconButton onClick={() => changeStateLeft(2)} aria-label="arrow-left">
+								<ArrowBackIcon />
+							</IconButton>
+						</div>
+					</Grid>
+					<Grid item container spacing={1} xs={8}>
+						<Zoom in={zoom} style={{ transitionDelay: '0ms' }}>
+							<Grid item xs={6}>
+								<div className={classes.align}>
+									{firstSmallSectionCards.map((firstSmallSectionCard, index) => {
+										return (
+											state === index &&
+											<ProjectsCard
+												key={firstSmallSectionCard.title}
+												header={firstSmallSectionCard.header}
+												title={firstSmallSectionCard.title}
+												details={firstSmallSectionCard.details}
+												source={firstSmallSectionCard.source}
+												website={firstSmallSectionCard.website}
+											/>
+										);
+									})}
+								</div>
+							</Grid>
+						</Zoom>
+						<Zoom in={zoom} style={{ transitionDelay: zoom ? '200ms' : '0ms' }}>
+							<Grid item xs={6}>
+								<div className={classes.align}>
+									{secondSmallSectionCards.map((secondSmallSectionCard, index) => {
+										return (
+											state === index &&
+											<ProjectsCard
+												key={secondSmallSectionCard.title}
+												header={secondSmallSectionCard.header}
+												title={secondSmallSectionCard.title}
+												details={secondSmallSectionCard.details}
+												source={secondSmallSectionCard.source}
+												website={secondSmallSectionCard.website}
+											/>
+										);
+									})}
+								</div>
+							</Grid>
+						</Zoom>
+					</Grid>
+					<Grid item xs={1}>
+						<div className={classes.align}>
+							<IconButton onClick={() => changeStateRight(2)} aria-label="arrow-right">
+								<ArrowForwardIcon />
+							</IconButton>
+						</div>
+					</Grid>
+				</>}
 
 			{xs && <>
 				<Grid item xs={2} sm={1}>
@@ -204,7 +205,7 @@ const Projects = () => {
 					</div>
 				</Grid>
 				<Grid item xs={8}>
-					<Grow in={grow}>
+					<Zoom in={zoom}>
 						<div className={classes.align}>
 							{cardContents.map((cardContent, index) => {
 								return (
@@ -220,7 +221,7 @@ const Projects = () => {
 								);
 							})}
 						</div>
-					</Grow>
+					</Zoom>
 				</Grid>
 				<Grid item xs={2} sm={1}>
 					<div className={classes.align}>
