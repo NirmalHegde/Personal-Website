@@ -13,7 +13,19 @@ const ProjectsStyles = makeStyles((theme) => ({
 		display: "flex",
 		alignItems: "center",
 		justifyContent: "center",
-	}
+	},
+	button: {
+		backgroundColor: "#b5befa",
+		borderRadius: 20,
+		marginRight: "2%",
+		textTransform: "none",
+		width: "90%",
+		"&:hover": {
+			transition: "0.3s",
+			color: "#ffffff",
+			backgroundColor: theme.palette.secondary.dark,
+		}
+	},
 }))
 
 export default ProjectsStyles;

@@ -1,238 +1,110 @@
-import React from 'react'
-import { Grid, Typography, IconButton, useMediaQuery, Zoom } from '@material-ui/core'
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import React from "react";
+import { Grid, Typography, Button, useMediaQuery } from "@material-ui/core";
 
-import ProjectsStyles from './ProjectsStyles'
-import ProjectsCard from './ProjectsCard/ProjectsCards'
-import { cardContents, firstSectionCards, secondSectionCards, thirdSectionCards, firstSmallSectionCards, secondSmallSectionCards } from './cardContents'
+import ProjectsStyles from "./ProjectsStyles";
+import { cardContents } from "./cardContents";
 
 const Projects = () => {
-	const classes = ProjectsStyles();
+  const classes = ProjectsStyles();
 
-	const lg = useMediaQuery('(min-width: 1280px)');
-	const md = useMediaQuery('(max-width: 1279px)');
-	const sm = useMediaQuery('(min-width: 870px)');
-	const sm2 = useMediaQuery('(min-width: 600px)');
-	const xs = useMediaQuery('(max-width: 869px)');
+  const md = useMediaQuery("(max-width: 960px)");
 
-	const [state, setState] = React.useState(0);
-	const [zoom, setZoom] = React.useState(true);
-
-	const changeStateLeft = (cards) => {
-		let divisor;
-		if (cards === 3) {
-			divisor = firstSectionCards.length;
-		} else if (cards === 2) {
-			divisor = firstSmallSectionCards.length;
-		} else {
-			divisor = cardContents.length
-		}
-		const negativeChange = (((state - 1) % divisor) + divisor) % divisor;
-		setZoom(false);
-		setTimeout(() => {
-			setState(negativeChange);
-			setZoom(true);
-		}, 500);
-	}
-
-	const changeStateRight = (cards) => {
-		let divisor;
-		if (cards === 3) {
-			divisor = firstSectionCards.length;
-		} else if (cards === 2) {
-			divisor = firstSmallSectionCards.length;
-		} else {
-			divisor = cardContents.length
-		}
-		setZoom(false);
-		setTimeout(() => {
-			setState((state + 1) % divisor);
-			setZoom(true);
-		}, 500);
-	}
-
-	return (
-		<Grid id="projects" className={classes.root} container>
-			<Grid className={classes.title} item xs={12}>
-				<br />
-				<Typography variant="h2">My Projects</Typography>
-				<Typography variant="h4">~ What have I been working on? ~</Typography>
-			</Grid>
-
-			{sm2 && <Grid item xs={1}></Grid>}
-
-			{lg && <>
-				<Grid item xs={1}>
-					<div className={classes.align}>
-						<IconButton onClick={() => changeStateLeft(3)} aria-label="arrow-left">
-							<ArrowBackIcon />
-						</IconButton>
-					</div>
-				</Grid>
-				<Grid item container spacing={1} xs={8}>
-					<Zoom in={zoom} style={{ transitionDelay: '0ms' }}>
-						<Grid item xs={4}>
-							<div className={classes.align}>
-								{firstSectionCards.map((firstSectionCard, index) => {
-									return (
-										state === index &&
-										<ProjectsCard
-											key={firstSectionCard.title}
-											header={firstSectionCard.header}
-											title={firstSectionCard.title}
-											details={firstSectionCard.details}
-											source={firstSectionCard.source}
-											website={firstSectionCard.website}
-										/>
-									);
-								})}
-							</div>
-						</Grid>
-					</Zoom>
-					<Zoom in={zoom} style={{ transitionDelay: zoom ? '200ms' : '0ms' }}>
-						<Grid item xs={4}>
-							<div className={classes.align}>
-								{secondSectionCards.map((secondSectionCard, index) => {
-									return (
-										state === index &&
-										<ProjectsCard
-											key={secondSectionCard.title}
-											header={secondSectionCard.header}
-											title={secondSectionCard.title}
-											details={secondSectionCard.details}
-											source={secondSectionCard.source}
-											website={secondSectionCard.website}
-										/>
-									);
-								})}
-							</div>
-						</Grid>
-					</Zoom>
-					<Zoom in={zoom} style={{ transitionDelay: zoom ? '400ms' : '0ms' }}>
-						<Grid item xs={4}>
-							<div className={classes.align}>
-								{thirdSectionCards.map((thirdSectionCard, index) => {
-									return (
-										state === index &&
-										<ProjectsCard
-											key={thirdSectionCard.title}
-											header={thirdSectionCard.header}
-											title={thirdSectionCard.title}
-											details={thirdSectionCard.details}
-											source={thirdSectionCard.source}
-											website={thirdSectionCard.website}
-										/>
-									);
-								})}
-							</div>
-						</Grid>
-					</Zoom>
-				</Grid>
-				<Grid item xs={1}>
-					<div className={classes.align}>
-						<IconButton onClick={() => changeStateRight(3)} aria-label="arrow-right">
-							<ArrowForwardIcon />
-						</IconButton>
-					</div>
-				</Grid>
-			</>}
-
-			{md &&
-				sm && <>
-					<Grid item xs={1}>
-						<div className={classes.align}>
-							<IconButton onClick={() => changeStateLeft(2)} aria-label="arrow-left">
-								<ArrowBackIcon />
-							</IconButton>
-						</div>
-					</Grid>
-					<Grid item container spacing={1} xs={8}>
-						<Zoom in={zoom} style={{ transitionDelay: '0ms' }}>
-							<Grid item xs={6}>
-								<div className={classes.align}>
-									{firstSmallSectionCards.map((firstSmallSectionCard, index) => {
-										return (
-											state === index &&
-											<ProjectsCard
-												key={firstSmallSectionCard.title}
-												header={firstSmallSectionCard.header}
-												title={firstSmallSectionCard.title}
-												details={firstSmallSectionCard.details}
-												source={firstSmallSectionCard.source}
-												website={firstSmallSectionCard.website}
-											/>
-										);
-									})}
-								</div>
-							</Grid>
-						</Zoom>
-						<Zoom in={zoom} style={{ transitionDelay: zoom ? '200ms' : '0ms' }}>
-							<Grid item xs={6}>
-								<div className={classes.align}>
-									{secondSmallSectionCards.map((secondSmallSectionCard, index) => {
-										return (
-											state === index &&
-											<ProjectsCard
-												key={secondSmallSectionCard.title}
-												header={secondSmallSectionCard.header}
-												title={secondSmallSectionCard.title}
-												details={secondSmallSectionCard.details}
-												source={secondSmallSectionCard.source}
-												website={secondSmallSectionCard.website}
-											/>
-										);
-									})}
-								</div>
-							</Grid>
-						</Zoom>
-					</Grid>
-					<Grid item xs={1}>
-						<div className={classes.align}>
-							<IconButton onClick={() => changeStateRight(2)} aria-label="arrow-right">
-								<ArrowForwardIcon />
-							</IconButton>
-						</div>
-					</Grid>
-				</>}
-
-			{xs && <>
-				<Grid item xs={2} sm={1}>
-					<div className={classes.align}>
-						<IconButton onClick={() => changeStateLeft(1)} aria-label="arrow-left">
-							<ArrowBackIcon />
-						</IconButton>
-					</div>
-				</Grid>
-				<Grid item xs={8}>
-					<Zoom in={zoom}>
-						<div className={classes.align}>
-							{cardContents.map((cardContent, index) => {
-								return (
-									state === index &&
-									<ProjectsCard
-										key={cardContent.title}
-										header={cardContent.header}
-										title={cardContent.title}
-										details={cardContent.details}
-										source={cardContent.source}
-										website={cardContent.website}
-									/>
-								);
-							})}
-						</div>
-					</Zoom>
-				</Grid>
-				<Grid item xs={2} sm={1}>
-					<div className={classes.align}>
-						<IconButton onClick={() => changeStateRight(1)} aria-label="arrow-right">
-							<ArrowForwardIcon />
-						</IconButton>
-					</div>
-				</Grid>
-			</>}
-		</Grid>
-	)
-}
+  return (
+    <Grid id="projects" className={classes.root} container>
+      <Grid className={classes.title} item xs={12}>
+        <br />
+        <Typography variant="h2">My Projects</Typography>
+        <br />
+      </Grid>
+      {cardContents.map((card, idx) => (
+        <>
+          <Grid item xs={12}>
+            <br />
+          </Grid>
+          <Grid item xs={1} />
+          {md && <Grid item xs={3} />}
+          {(idx % 2 === 0 || md) && (
+            <Grid item xs={5} lg={3}>
+              <img
+                style={{ height: "auto", width: "23vw", borderRadius: "10%" }}
+                src={card.header}
+                aria-label={card.title}
+              />
+            </Grid>
+          )}
+          {md && <Grid item xs={3} />}
+          {md && <Grid item xs={1} />}
+          <Grid item xs={10} lg={7}>
+            <Typography variant="h3">
+              <b>{card.title}</b>
+            </Typography>
+            <br />
+            <Typography variant="body1">{card.details}</Typography>
+            <br />
+            <Grid container>
+              {card["website"] && (
+                <Grid item xs={12} md={3}>
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href={card.website}
+                    className={classes.links}
+                  >
+                    <Button
+                      variant="contained"
+                      size="large"
+                      className={classes.button}
+                    >
+                      See Live Demo
+                    </Button>
+                  </a>
+                </Grid>
+              )}
+              {md && (
+                <Grid item xs={12}>
+                  <br />
+                </Grid>
+              )}
+              {card["source"] && (
+                <Grid item xs={12} md={3}>
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href={card.source}
+                    className={classes.links}
+                  >
+                    <Button
+                      variant="contained"
+                      size="large"
+                      className={classes.button}
+                    >
+                      See Github
+                    </Button>
+                  </a>
+                </Grid>
+              )}
+            </Grid>
+          </Grid>
+          {idx % 2 === 1 && !md && (
+            <Grid item xs={3}>
+              <img
+                style={{ height: "auto", width: "23vw", borderRadius: "10%" }}
+                src={card.header}
+                aria-label={card.title}
+              />
+            </Grid>
+          )}
+          <Grid item xs={1} />
+          <Grid item xs={12}>
+            <br />
+          </Grid>
+        </>
+      ))}
+      <Grid className={classes.title} item xs={12}>
+        <br />
+      </Grid>
+    </Grid>
+  );
+};
 
 export default Projects;

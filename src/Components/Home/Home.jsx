@@ -15,17 +15,15 @@ const Home = () => {
 			<div className={classes.title}>
 				<div>
 					<br />
-					<Typography className={classes.titleText} variant="h3">Hello there! My name is</Typography>
-					<br />
 					<Typography className={classes.titleText} variant="h1">Nirmal Hegde</Typography>
 					<div className={classes.inline}>
-						<p style={{ display: "inline-block" }}> And I am a&nbsp;</p>
 						<div style={{ display: "inline-block" }}>
 							<Typewriter
 								options={{
-									strings: ['Developer', 'Leader', 'Designer'],
+									strings: ['I ♥ Developing', 'Machine that turns Mountain Dew into Code', '"It\'s not a bug, it\'s an undocumented feature!" - Yoda, maybe'],
 									autoStart: true,
 									loop: true,
+									deleteSpeed: 5,
 								}}
 							/>
 						</div>

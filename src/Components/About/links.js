@@ -21,6 +21,11 @@ import vscode from './Assets/vscode.png'
 import solidworks from './Assets/solidworks.png'
 import autocad from './Assets/autocad.png'
 import heroku from './Assets/heroku.png'
+import csharp from './Assets/csharp.png'
+import chakraui from './Assets/chakraui.png'
+import dotnet from './Assets/dotnet.png'
+import graphql from './Assets/graphql.png'
+import apollo from './Assets/apollo.png'
 import resume from './Assets/resume.pdf'
 
 export const links = {
@@ -48,6 +53,11 @@ export const links = {
 	AutoCAD: autocad,
 	Heroku: heroku,
 	Resume: resume,
+	"C#": csharp,
+	"Chakra-UI": chakraui,
+	GraphQL: graphql,
+	Apollo: apollo,
+	".NET": dotnet,
 	Github: "https://github.com/NirmalHegde",
 	LinkedIn: "https://www.linkedin.com/in/nirmalhegde"
 }

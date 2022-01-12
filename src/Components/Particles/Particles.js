@@ -28,7 +28,7 @@ const Particle = () => {
 						"attract": {
 							"distance": 300,
 							"duration": 2,
-							"speed": 4,
+							"speed": 1,
 						},
 						"grab": {
 							"distance": 400
@@ -77,10 +77,10 @@ const Particle = () => {
 						"random": {
 							"enable": true
 						},
-						"animation": {
-							"enable": true,
-							"speed": 1
-						}
+					},
+					"animation": {
+						"enable": true,
+						"speed": 0.1
 					},
 					"shape": {
 						"options": {
@@ -98,7 +98,7 @@ const Particle = () => {
 									"for",
 									"if"
 								],
-								"font": "Roboto Mono",
+								"font": "Courier New",
 								"style": "",
 								"weight": "400",
 								"fill": true
@@ -126,13 +126,13 @@ const Particle = () => {
 						"type": "char"
 					},
 					"size": {
-						"value": 8,
+						"value": 10,
 						"random": {
 							"enable": true
 						},
 						"animation": {
 							"minimumValue": 0.3,
-							"speed": 4
+							"speed": 2
 						}
 					}
 				}

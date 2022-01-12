@@ -1,7 +1,7 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles';
 
 //Theme setup for UI
-const theme = createMuiTheme({
+const theme = createTheme({
 
   typography: {
     fontFamily: "Poppins, Roboto, Arial, sans-serif",

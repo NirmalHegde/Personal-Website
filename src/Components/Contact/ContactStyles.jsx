@@ -1,6 +1,9 @@
 import { makeStyles } from '@material-ui/styles';
 
 const ContactStyles = makeStyles((theme) => ({
+	root: {
+		background: theme.palette.primary.light
+	},
 	title: {
 		textAlign: "center",
 		color: theme.palette.secondary.dark
