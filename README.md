@@ -3,5 +3,5 @@ This is my personal website. It will act as a portfolio for all my projects and 
 <br />
 
 ## How to access
-1. Click this link: www.nirmalhegde.me
+1. Click this link: https://nirmalhegde.web.app
 2. Enjoy!
