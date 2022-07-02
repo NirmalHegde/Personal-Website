@@ -17,9 +17,7 @@ import puppeteer from './Assets/puppeteer.png'
 import git from './Assets/git.png'
 import jest from './Assets/jest.png'
 import rmq from './Assets/rmq.png'
-import vscode from './Assets/vscode.png'
 import solidworks from './Assets/solidworks.png'
-import autocad from './Assets/autocad.png'
 import heroku from './Assets/heroku.png'
 import csharp from './Assets/csharp.png'
 import chakraui from './Assets/chakraui.png'
@@ -27,6 +25,9 @@ import dotnet from './Assets/dotnet.png'
 import graphql from './Assets/graphql.png'
 import apollo from './Assets/apollo.png'
 import resume from './Assets/resume.pdf'
+import django from './Assets/django.png'
+import docker from './Assets/docker.png'
+import kubernetes from './Assets/kubernetes.png'
 
 export const links = {
 	default: profile,
@@ -48,9 +49,7 @@ export const links = {
 	Git: git,
 	Jest: jest,
 	RabbitMQ: rmq,
-	"VS Code": vscode,
 	SolidWorks: solidworks,
-	AutoCAD: autocad,
 	Heroku: heroku,
 	Resume: resume,
 	"C#": csharp,
@@ -58,6 +57,9 @@ export const links = {
 	GraphQL: graphql,
 	Apollo: apollo,
 	".NET": dotnet,
+	Django: django,
+	Docker: docker,
+	Kubernetes: kubernetes,
 	Github: "https://github.com/NirmalHegde",
 	LinkedIn: "https://www.linkedin.com/in/nirmalhegde"
 }

@@ -41,6 +41,7 @@ const About = () => {
   const backend = [
     "Node,",
     "Express,",
+    "Django,",
     ".NET,",
     "Firebase,",
     "MongoDB,",
@@ -50,11 +51,11 @@ const About = () => {
     "Git,",
     "Jest,",
     "RabbitMQ,",
-    "VS Code,",
     "Apollo,",
     "SolidWorks,",
-    "AutoCAD,",
-    "Heroku",
+    "Heroku,",
+    "Docker,",
+    "Kubernetes"
   ];
 
   // handling for changing the image

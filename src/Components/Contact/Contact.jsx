@@ -24,6 +24,7 @@ const Contact = () => {
   const lg = useMediaQuery("(min-width: 960px)");
 
   // state declaration
+  const [isPending, setIsPending] = React.useState(false);
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [subject, setSubject] = React.useState("");
@@ -35,6 +36,7 @@ const Contact = () => {
 
   // event handler
   const submitHander = (e) => {
+    setIsPending(true);
     e.preventDefault(); // prevents screen refresh
     // uses regex to verify email
     const emailRegex =
@@ -60,6 +62,8 @@ const Contact = () => {
       if (subject === "") {
         setErrorSubject(true);
       }
+
+      setIsPending(false);
     } else {
       const emailObject = {
         // object to be sent to firebase and email
@@ -84,18 +88,20 @@ const Contact = () => {
           setErrorEmail(false);
           setErrorBody(false);
           setErrorSubject(false);
+          setIsPending(false);
         })
-		.catch((err) => {
-			alert("something went wrong....");
-			setName("");
-			setEmail("");
-			setSubject("");
-			setBody("");
-			setErrorName(false);
-			setErrorEmail(false);
-			setErrorBody(false);
-			setErrorSubject(false);
-		})
+        .catch((err) => {
+          alert("something went wrong....");
+          setName("");
+          setEmail("");
+          setSubject("");
+          setBody("");
+          setErrorName(false);
+          setErrorEmail(false);
+          setErrorBody(false);
+          setErrorSubject(false);
+          setIsPending(false);
+        });
     }
   };
 
@@ -248,6 +254,7 @@ const Contact = () => {
                 variant="contained"
                 size="large"
                 className={classes.button}
+                disabled={isPending}
               >
                 Submit
               </Button>
